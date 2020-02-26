@@ -4,11 +4,12 @@ html
 
   // WAT IS THIS?!
   // We inherit box-sizing: border-box; from our <html> selector
-*,
+*
+  margin: 0
+  padding: 0,
 *:before,
 *:after
   box-sizing: inherit
-
 
 body
   //delete the background to apply your own style
@@ -18,8 +19,3 @@ body
   color: black
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
-
-
-.wrapper
-  width: 100%
-  margin: 0 auto

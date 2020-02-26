@@ -1,0 +1,219 @@
+
+.grid-container
+  display: grid
+  width: 100vw
+  max-height: 1024px
+  margin: 0 auto
+  grid-template-areas: "sm sm sd sd" "sm sm sd sd" "pm pm hs hs" "pm pm hs hs"
+  grid-template-columns: 4fr 1fr 1fr 4fr
+  grid-template-rows: 200px 200px 200px 200px
+  background: rgba(50, 50, 50, 0.5)
+  position: relative
+  z-index: -2
+    
+.grid-item
+
+  img
+    object-fit: cover
+    display: block
+    width: 100%
+    height: 100%
+    max-width: $w-max-grid
+
+.grid-item-1
+  background: blue
+  grid-area: sm
+  position: absolute
+  align-self: end
+  justify-self: end
+  z-index: 4
+
+.grid-item-2
+  background: green
+  grid-area: sd
+  position: absolute
+  align-self: end
+  justify-self: start
+  z-index: 4
+
+.grid-item-3
+  background: red
+  grid-area: pm
+  position: absolute
+  align-self: start
+  justify-self: end
+  z-index: 4
+
+.grid-item-4
+  background: yellow
+  grid-area: hs
+  position: absolute
+  align-self: start
+  justify-self: start
+  z-index: 4
+
+.grid-item-5 
+  position: absolute
+  grid-row: 2 / 4
+  grid-column: 2 /4
+  align-self: center
+  justify-self: center
+  transform: translate(2%, 2%)
+  z-index: 5
+
+.grid-text
+  h3
+    color: white
+    margin: 0
+    padding: 10px
+    z-index: -1
+
+.grid-header-1
+  background: blue
+  position: absolute
+  grid-row: 1 / 3
+  grid-column: 1 / 3
+  align-self: end
+  justify-self: center
+  z-index: 2
+
+.grid-header-2
+  background: green
+  position: absolute
+  grid-row: 1 / 3
+  grid-column: 3 / -1
+  align-self: end
+  justify-self: center
+  z-index: 2
+
+.grid-header-3
+  background: red
+  position: absolute
+  grid-row: 3 / -1
+  grid-column: 1 / 3
+  align-self: start
+  justify-self: center
+  z-index: 2
+
+.grid-header-4
+  background: yellow
+  position: absolute
+  grid-row: 3 / -1
+  grid-column: 3 / -1
+  align-self: start
+  justify-self: center
+  z-index: 2
+
+.grid-header-5 
+  position: absolute
+  grid-row: 3 / 4
+  grid-column: 2 /4
+  align-self: center
+  justify-self: center
+  z-index: 3
+
+@media #{$tablet} 
+    .grid-container
+        grid-template-rows: 127px 150px 150px 127px
+
+@media #{$desktop} 
+    .grid-container
+        grid-template-rows: 116px 252px 252px 116px
+
+@media #{$sm-tablet} 
+    .grid-container
+        grid-template-rows: 70px 116px 116px 70px
+
+@media #{$phone} 
+    .grid-container
+        display: grid
+        grid-template-areas: "sm" "sd" "pm" "hs"
+        grid-template-columns: repeat(auto-fill, minmax(257px, 1fr))
+        grid-template-rows: repeat(minmax(200px, 1fr))
+        position: relative
+        z-index: -2
+        background: rgba(240, 18, 18, 0.5)
+    
+    .grid-item
+        img
+            object-fit: cover
+            display: block
+            width: 100%
+            max-width: 512px
+    
+    .grid-item-1
+        background: blue
+        grid-area: sm
+        position: absolute
+        align-self: center
+        justify-self: stretch 
+        z-index: 1
+
+    .grid-item-2
+        background: green
+        grid-area: sd
+        position: relative
+        align-self: stretch
+        justify-self: stretch
+        z-index: 1
+
+    .grid-item-3
+        background: red
+        grid-area: pm
+        position: relative
+        align-self: stretch
+        justify-self: stretch 
+        z-index: 1
+
+    .grid-item-4
+        background: yellow
+        grid-area: hs
+        position: relative
+        align-self: start
+        justify-self: stretch 
+        z-index: 1
+
+    .grid-item-5 
+        display: none
+    
+    .grid-text
+        h3
+            color: white
+            margin: 0
+            padding: 10px
+            z-index: -1
+
+    .grid-header-1
+        background: blue
+        position: absolute
+        grid-area: sm
+        align-self: end
+        justify-self: center
+        z-index: 2
+
+    .grid-header-2
+        background: green
+        position: absolute
+        grid-area: sd
+        align-self: end
+        justify-self: center
+        z-index: 2
+
+    .grid-header-3
+        background: red
+        position: absolute
+        grid-area: pm
+        align-self: end
+        justify-self: center
+        z-index: 2
+
+    .grid-header-4
+        background: yellow
+        position: absolute
+        grid-area: hs
+        align-self: end
+        justify-self: center
+        z-index: 2
+
+    .grid-header-5 
+        display: none
