@@ -1,0 +1,23 @@
+.nico
+    display: flex
+    align-items: center
+    justify-items: center
+    @media screen and (max-width: 475px)
+        display: block
+
+    img
+        @include shadow
+        margin: 5% 0 5% 5%
+        width: 50%
+        align-self: center
+        max-width: 390px
+        @media screen and (max-width: 475px)
+            display: none
+
+    .content
+        width: 50%
+        margin: 10% 10% auto 5%
+        @media screen and (max-width: 475px)
+            margin: 5% auto
+            width: 80%
+            text-align: center
