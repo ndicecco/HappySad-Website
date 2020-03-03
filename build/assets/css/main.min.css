@@ -1,5 +1,6 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize * */
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,900");
+@import url("https://fonts.googleapis.com/css?family=Asap&display=swap");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -199,8 +200,16 @@ body {
   color: black;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  background: #edecea; }
+
+.bg-wrap {
   background: #60caff;
-  background: linear-gradient(142deg, #60caff 0%, #6363cc 47%, #ba60ff 100%); }
+  background: linear-gradient(-90deg, #60caff -46%, #6363cc 47%, #ba60ff 176%);
+  max-width: 1100px;
+  margin: 0 auto;
+  -webkit-box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5); }
 
 .wrapper {
   width: 100%;
@@ -247,11 +256,11 @@ input[type="button"] {
     box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5); }
 
 a {
-  color: #0074D9;
+  color: white;
   text-decoration: none;
   outline: 0; }
   a:hover, a:focus {
-    color: #7FDBFF; }
+    color: white; }
 
 ::selection {
   background: #FFF498; }
@@ -272,7 +281,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color: #222;
   font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Asap', sans-serif;
   font-weight: 900;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); }
 
@@ -344,11 +353,15 @@ hr {
     text-transform: uppercase; }
     @media screen and (max-width: 475px) {
       .banner .headline h1 {
-        font-size: 22px; } }
+        font-size: 3em; } }
+
+#nav {
+  max-width: 1100px;
+  margin: 0 auto; }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
   grid-gap: 0;
   margin: 0 auto;
   position: relative; }
@@ -401,6 +414,10 @@ hr {
   .nav-image img {
     filter: blur(2px); } }
 
+#basic {
+  max-width: 1100px;
+  margin: 0 auto; }
+
 .nico {
   display: flex;
   align-items: center;
@@ -416,17 +433,19 @@ hr {
     width: 50%;
     align-self: center;
     max-width: 390px; }
-    @media screen and (max-width: 475px) {
+    @media screen and (max-width: 600px) {
       .nico img {
         display: none; } }
   .nico .content {
     width: 50%;
     margin: 10% 10% auto 5%; }
-    @media screen and (max-width: 475px) {
+    @media screen and (max-width: 600px) {
       .nico .content {
         margin: 5% auto;
         width: 80%;
-        text-align: center; } }
+        text-align: center; }
+        .nico .content h3 {
+          font-size: 3em; } }
 
 #footer {
   text-align: center; }
