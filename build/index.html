@@ -5,9 +5,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="assets/css/main.min.css" />
+    <script src="./assets/js/slide-menu.js"></script>
 </head>
 <body>
   <div class="bg-wrap">
+    <div id="content">
+      <span class="slide">
+        <a href="#" onclick="openSlideMenu()">
+          <svg class="hamburger" width="58" height="39" xmlns="http://www.w3.org/2000/svg"><g fill="#FCFAF1" fill-rule="evenodd"><rect y="30" width="58" height="9" rx="4.5"/><rect width="58" height="9" rx="4.5"/><rect y="15" width="58" height="9" rx="4.5"/></g></svg>
+        </a>
+      </span>
+      <div id="menu" class="side-nav">
+        <a href="#" class="close" onclick="closeSlideMenu()">
+          <svg class="Ex" width="44" height="45" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-2 -2)" fill="#FCFAF1" fill-rule="evenodd"><rect transform="rotate(45 24 24.5)" x="-5" y="20" width="58" height="9" rx="4.5"/><rect transform="scale(1 -1) rotate(45 83.148 0)" x="-5" y="20" width="58" height="9" rx="4.5"/></g></svg>
+        </a>
+        <a href="#">Stage Management</a>
+        <a href="#">Sound Design</a>
+        <a href="#">Production Management</a>
+        <a href="#">HappySad Theatre</a> 
+      </div>
+    </div>
     <section id="header">
       <div class="wrapper">
         <div class="banner">
@@ -28,7 +45,7 @@
             <a href="#" class="title">Stage Management</a>
             <div class="nav-image">
               <a href="#">
-                <img class="nav-photo" src="assets/img/ctora 1-ns.jpg">
+                <img class="nav-photo" src="assets/img/ctora - 960.jpg">
               </a>
             </div>
           </div>
@@ -36,7 +53,7 @@
             <a href="#" class="title">Sound Design</a>
             <div class="nav-image">
               <a href="#">
-                <img class="nav-photo" src="assets/img/Spine 1.jpg">
+                <img class="nav-photo" src="assets/img/spine - 960.jpg">
               </a>
             </div>
           </div>
@@ -44,7 +61,7 @@
             <a href="#" class="title">Production Management</a>
             <div class="nav-image">
               <a href="#">
-                <img class="nav-photo" src="assets/img/KIRI-1_LouisePotikiBryant_Photo-Credit_-Stephen-A’Court-2048x1112.jpg">
+                <img class="nav-photo" src="assets/img/KIRI - 960.jpg">
               </a>
             </div>
           </div>
@@ -52,7 +69,7 @@
             <a href="#" class="title">HappySad Theatre</a>
             <div class="nav-image">
               <a href="#">
-                <img class="nav-photo" src="assets/img/SBIC_photo2_Fringe2018.jpg">
+                <img class="nav-photo" src="assets/img/SBIC - 960.jpg">
               </a>
           </div>
         </div>
@@ -62,7 +79,7 @@
       <div class="wrapper">
         <div class="nico">
           <img 
-          src="/assets/img/nico-sm-ns.jpg" 
+          src="/assets/img/nico-sm.jpg" 
           alt="in the office">
           <div class="content">
               <h3>
@@ -80,18 +97,11 @@
     </section>
     <section id="footer">
       <div class="wrapper">
-        <p>COPYRIGHT ©2020. ALL RIGHTS RESERVED. Design by <a href='X'>Nico Dicecco</a></p>
-        <ul>
-          <li>
-            <a href='#'>CONTACT</a>
-            <a href='#'> RESUME</a>
-            <a href='#'> PHOTO CREDITS</a>
-        </ul>
-      
-      
+        <p>COPYRIGHT ©2020. ALL RIGHTS RESERVED. Design by <a href='#'>Nico Dicecco</a></p>
       </div>
     </section>
   </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/app.js"></script>
 </body>

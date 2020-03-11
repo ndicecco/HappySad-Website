@@ -9,8 +9,12 @@
   margin: 0 auto
   position: relative
 
+  @media screen and (max-width: 367px)
+    display: block
+
   img
     width: 100%
+
 
 .grid-item
   position: relative
@@ -26,6 +30,14 @@
     
     .nav-image img
       filter: blur(2px)
+
+  @media screen and (max-width: 733px)
+    max-width: 512px
+    margin: 0 auto
+    @include shadow
+
+
+.grid-item-1
 
 .nav-photo
   line-height: 0
