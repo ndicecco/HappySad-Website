@@ -27,6 +27,7 @@ let del = require('del');
 let plumber = require('gulp-plumber');
 let sourcemaps = require('gulp-sourcemaps');
 let rename = require('gulp-rename');
+let webpack = require('webpack-stream');
 
 // Browser plugins
 let browserSync = require('browser-sync').create();
@@ -103,8 +104,6 @@ function vendor(done) {
         .pipe(dest('build/assets/js'));
     done();
 };
-
-
 
 // Watch for changes
 
