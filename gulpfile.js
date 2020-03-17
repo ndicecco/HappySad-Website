@@ -9,6 +9,7 @@ const {
     parallel
 } = require('gulp');
 
+
 // --------------------------------------------
 // Dependencies
 // --------------------------------------------
@@ -17,6 +18,13 @@ const {
 let sass = require('gulp-sass');
 let autoprefixer = require('gulp-autoprefixer');
 let minifycss = require('gulp-clean-css');
+
+// Babel / Browserify
+const babel = require('gulp-babel');
+var babelify = require('babelify');
+var browserify = require('browserify');
+var buffer = require('vinyl-buffer');
+var source = require('vinyl-source-stream');
 
 // JSS / plugins
 let uglify = require('gulp-uglify');
@@ -105,8 +113,34 @@ function vendor(done) {
     done();
 };
 
-// Watch for changes
+// Compile using Babel
+function babelize () {
+    return gulp.src('src/js/*.js')
+        .pipe(babel())
+        .pipe(gulp.dest('src/js'));
+};
 
+//Browserify to use ES6 modules, with support for sourcemaps
+function bify() {
+    var bundler = browserify({
+        entries: 'src/app.js',
+        debug: true
+    });
+
+    bundler.transform(babelify);
+
+    bundler.bundle()
+        .on('error', function (err) { console.error(err); })
+        .pipe(source('src/js/*.js'))
+        .pipe(buffer())
+        .pipe(sourcemaps.init({ loadMaps: true }))
+        .pipe(uglify()) // Use any gulp plugins you want now
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('src/js'));
+};
+
+
+// Watch for changes
 function watcher() {
 
     // Serve files from the root of this project
@@ -125,7 +159,9 @@ function watcher() {
 };
 
 
+
+
 // use default task to launch Browsersync and watch JS files
-let build = parallel(watcher);
+let build = parallel(bify, watcher);
 task('default', build);
 task('img', img);
