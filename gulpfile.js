@@ -19,13 +19,6 @@ let sass = require('gulp-sass');
 let autoprefixer = require('gulp-autoprefixer');
 let minifycss = require('gulp-clean-css');
 
-// Babel / Browserify
-const babel = require('gulp-babel');
-var babelify = require('babelify');
-var browserify = require('browserify');
-var buffer = require('vinyl-buffer');
-var source = require('vinyl-source-stream');
-
 // JSS / plugins
 let uglify = require('gulp-uglify');
 
@@ -113,13 +106,6 @@ function vendor(done) {
     done();
 };
 
-// Compile using Babel
-function babelize () {
-    return gulp.src('src/js/*.js')
-        .pipe(babel())
-        .pipe(gulp.dest('src/js'));
-};
-
 //Browserify to use ES6 modules, with support for sourcemaps
 function bify() {
     var bundler = browserify({
@@ -162,6 +148,6 @@ function watcher() {
 
 
 // use default task to launch Browsersync and watch JS files
-let build = parallel(bify, watcher);
+let build = parallel(watcher);
 task('default', build);
 task('img', img);
