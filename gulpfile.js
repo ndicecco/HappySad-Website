@@ -9,7 +9,6 @@ const {
     parallel
 } = require('gulp');
 
-
 // --------------------------------------------
 // Dependencies
 // --------------------------------------------
@@ -28,7 +27,6 @@ let del = require('del');
 let plumber = require('gulp-plumber');
 let sourcemaps = require('gulp-sourcemaps');
 let rename = require('gulp-rename');
-let webpack = require('webpack-stream');
 
 // Browser plugins
 let browserSync = require('browser-sync').create();
@@ -106,26 +104,6 @@ function vendor(done) {
     done();
 };
 
-//Browserify to use ES6 modules, with support for sourcemaps
-function bify() {
-    var bundler = browserify({
-        entries: 'src/app.js',
-        debug: true
-    });
-
-    bundler.transform(babelify);
-
-    bundler.bundle()
-        .on('error', function (err) { console.error(err); })
-        .pipe(source('src/js/*.js'))
-        .pipe(buffer())
-        .pipe(sourcemaps.init({ loadMaps: true }))
-        .pipe(uglify()) // Use any gulp plugins you want now
-        .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest('src/js'));
-};
-
-
 // Watch for changes
 function watcher() {
 
@@ -143,8 +121,6 @@ function watcher() {
     watch(['build/*.html', 'build/assets/css/*.css', 'build/assets/js/*.js', 'build/assets/js/vendors/*.js']).on('change', browserSync.reload);
 
 };
-
-
 
 
 // use default task to launch Browsersync and watch JS files

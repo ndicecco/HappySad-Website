@@ -4,7 +4,7 @@
   "description": "Starter Project",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel build/index.html"
   },
   "author": "Jesse Showalter",
   "license": "ISC",
@@ -12,6 +12,7 @@
     "@babel/core": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "browser-sync": "^2.26.3",
+    "bundler": "^0.8.0",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
@@ -23,7 +24,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^3.0.1"
+    "gulp-uglify": "^3.0.1",
+    "parcel": "^1.12.4"
   },
   "dependencies": {
     "@dogstudio/highway": "^2.1.3",
