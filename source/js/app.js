@@ -1,3 +1,7 @@
+import App from './modules/secrets.js'
+
+const App = new App();
+
 //GSAP Animations
 var tl = gsap.timeline();
 tl.from(".headline", {duration: 2, opacity: 0}, "0.8");
