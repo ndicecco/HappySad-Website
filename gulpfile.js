@@ -27,6 +27,8 @@ let del = require('del');
 let plumber = require('gulp-plumber');
 let sourcemaps = require('gulp-sourcemaps');
 let rename = require('gulp-rename');
+let buffer = require('vinyl-buffer');
+let source = require('vinyl-source-stream');
 
 // Browser plugins
 let browserSync = require('browser-sync').create();
@@ -42,7 +44,11 @@ let styleDest = 'build/assets/css/';
 
 let vendorSrc = 'source/js/vendors/';
 let vendorDest = 'build/assets/js/';
-let scriptSrc = 'source/js/*.js';
+
+let jsSRC = 'app.js';
+let jsFolder = 'source/js/';
+let jsFILES = [jsSRC];
+let scriptSrc = 'source/js/**/*.js';
 let scriptDest = 'build/assets/js/';
 
 let htmlSrc = 'source/';
@@ -58,16 +64,22 @@ let htmlDest = 'build/';
 
 // Compiles SASS files
 function css(done) {
-    src('source/sass/**/*.sass')
+    src(styleSrc)
+        .pipe(sourcemaps.init())
         .pipe(plumber())
         .pipe(sass({
+            errorLogToConsole: true,
             style: 'compressed'
+        }))
+        .on('error', console.error.bind(console))
+        .pipe(autoprefixer({
+            cascade: false
         }))
         .pipe(rename({
             basename: 'main',
             suffix: '.min'
         }))
-
+        .pipe(sourcemaps.write('./'))
         .pipe(dest('build/assets/css'));
     done();
 };
@@ -83,10 +95,28 @@ function img(done) {
 
 // Uglify js files
 function js(done) {
-    src('source/js/*.js')
-        .pipe(plumber())
-        .pipe(uglify())
-        .pipe(dest('build/assets/js'));
+    jsFILES.map(function (entry) {
+        return browserify({
+                entries: [jsFolder + entry]
+            })
+            .transform(babelify, {
+                presets: ['@babel/preset-env']
+            })
+            .bundle()
+            .pipe(source(entry))
+            .pipe(rename({
+                extname: '.min.js'
+            }))
+            .pipe(buffer())
+            .pipe(sourcemaps.init({
+                loadMaps: true
+            }))
+            .pipe(uglify())
+            .pipe(plumber())
+            .pipe(uglify())
+            .pipe(sourcemaps.write('./'))
+            .pipe(dest(scriptDest));
+    })
     done();
 };
 
@@ -100,7 +130,7 @@ function vendor(done) {
         .pipe(plumber())
         .pipe(concat('vendors.js'))
         .pipe(uglify())
-        .pipe(dest('build/assets/js'));
+        .pipe(dest(scriptDest));
     done();
 };
 
