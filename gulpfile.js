@@ -29,6 +29,8 @@ let sourcemaps = require('gulp-sourcemaps');
 let rename = require('gulp-rename');
 let buffer = require('vinyl-buffer');
 let source = require('vinyl-source-stream');
+let browserify = require('browserify');
+let babelify = require('babelify');
 
 // Browser plugins
 let browserSync = require('browser-sync').create();

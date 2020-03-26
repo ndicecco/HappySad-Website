@@ -1,6 +1,5 @@
-import App from './modules/secrets.js'
-
-const App = new App();
+import Swup from 'swup';
+const swup = new Swup();
 
 //GSAP Animations
 var tl = gsap.timeline();
