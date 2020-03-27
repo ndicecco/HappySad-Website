@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.min.css" />
   <script src="./assets/js/slide-menu.js"></script>
-  <script defer src="node_modules/swup/dist/swup.min.js"></script>
+  <script src="./assets/js/musicbox.js"></script>
 </head>
 
 <body>
@@ -49,13 +49,38 @@
             </a>
           </div>
     </section>
-    <main id="swup" class="transition-fade">
-      <section id="nav">
+    <main id="swup" class="transition-move transition-fade">
+      <section id="gallery">
         <div class="wrapper">
           <div class="grid-container">
-            <h3>Sounds</h3>
-            <p class="big">Create a new grid here for sound design samples</p>
-          </div>
+            <div class="grid-item grid-item-1">
+              <div class="musicbox">
+                <div class="show">A Beautiful View
+                </div>
+                <div class="buttons">
+                  <button id="play" onclick="playOrPauseSong()"><img src="./assets/img/play.png" /></button>
+                </div>
+                <div id="seek-bar">
+                  <div id="fill"></div>
+                  <div id="handle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="grid-item grid-item-2">
+              <div class="musicbox">
+                <div class="show">The Best Christmas Pageant Ever</div>
+              </div>
+            </div>
+            <div class="grid-item grid-item-3">
+              <div class="musicbox">
+                <div class="show">Dancing Lessons</div>
+              </div>
+              <div class="grid-item grid-item-4">
+                <div class="musicbox">
+                  <div class="show">Spine</div>
+                </div>
+              </div>
+            </div>
       </section>
       <section class="home">
         <div class="nico">
@@ -64,7 +89,18 @@
             <h3>
               Sound Design
             </h3>
-            <p class="big">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem a libero culpa distinctio? Impedit nemo eaque fugiat tempore dicta architecto velit sed accusantium eligendi quo recusandae commodi quae repellat perferendis, adipisci deserunt doloribus alias! Non id repellat beatae inventore ipsam, pariatur dicta error sapiente aliquam recusandae eligendi, praesentium modi animi qui libero fugiat asperiores nostrum itaque quae. Ullam, distinctio aspernatur doloribus velit quibusdam ipsum corporis ex accusantium esse enim architecto, quia quidem minus amet suscipit nam at, est ipsa. Autem dolores nulla repellendus, quibusdam minima eos dignissimos labore velit enim.
+            <p class="big">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem a libero culpa
+              distinctio? Impedit nemo eaque fugiat tempore dicta architecto velit sed accusantium eligendi quo
+              recusandae
+              commodi quae repellat perferendis, adipisci deserunt doloribus alias! Non id repellat beatae inventore
+              ipsam,
+              pariatur dicta error sapiente aliquam recusandae eligendi, praesentium modi animi qui libero fugiat
+              asperiores
+              nostrum itaque quae. Ullam, distinctio aspernatur doloribus velit quibusdam ipsum corporis ex accusantium
+              esse
+              enim architecto, quia quidem minus amet suscipit nam at, est ipsa. Autem dolores nulla repellendus,
+              quibusdam
+              minima eos dignissimos labore velit enim.
             </p>
           </div>
         </div>
@@ -79,7 +115,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="node_modules/swup/dist/swup.min.js"></script>
   <script src="./assets/js/app.js"></script>
-  <script src="./assets/js/vendors.js"></script>
+  <script>
+    var fillBar = document.getElementById("fill");
+
+    sound.addEventListener('timeupdate', function () {
+      var position = sound.currentTime / sound.duration;
+
+      fillBar.style.width = position * 100 + '%';
+    });
+  </script>
 </body>
 
 </html>
