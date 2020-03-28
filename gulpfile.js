@@ -144,7 +144,8 @@ function watcher() {
         server: {
             baseDir: "./build"
         },
-        notify: false
+        notify: false,
+        open: false
     });
 
     watch(styleSrc, series(css));

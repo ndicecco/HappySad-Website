@@ -52,58 +52,88 @@
     <main id="swup" class="transition-move transition-fade">
       <section id="gallery">
         <div class="wrapper">
-          <div class="grid-container">
-            <div class="grid-item grid-item-1">
-              <div class="musicbox">
-                <div class="show">A Beautiful View
-                </div>
+          <div class="grid-containment">
+            <div class="location-listing">
+              <div class="musicboxes">
+                <!-- <a class="location-title" href="#">Spine</a> -->
+                <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/1.jpg" alt="waltz"></a></div>
                 <div class="buttons">
-                  <button id="play" onclick="playOrPauseSong()"><img src="./assets/img/play.png" /></button>
-                </div>
-                <div id="seek-bar">
-                  <div id="fill"></div>
-                  <div id="handle"></div>
-                </div>
-              </div>
-            </div>
-            <div class="grid-item grid-item-2">
-              <div class="musicbox">
-                <div class="show">The Best Christmas Pageant Ever</div>
-              </div>
-            </div>
-            <div class="grid-item grid-item-3">
-              <div class="musicbox">
-                <div class="show">Dancing Lessons</div>
-              </div>
-              <div class="grid-item grid-item-4">
-                <div class="musicbox">
-                  <div class="show">Spine</div>
+                  <button class="play" id="s0" onclick="playOrPauseSong(0)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(0)"><img
+                      src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill0"></div>
+                  </div>
                 </div>
               </div>
             </div>
-      </section>
-      <section class="home">
-        <div class="nico">
-          <img src="/assets/img/nico-sm.jpg" alt="in the office">
-          <div class="content">
-            <h3>
-              Sound Design
-            </h3>
-            <p class="big">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem a libero culpa
-              distinctio? Impedit nemo eaque fugiat tempore dicta architecto velit sed accusantium eligendi quo
-              recusandae
-              commodi quae repellat perferendis, adipisci deserunt doloribus alias! Non id repellat beatae inventore
-              ipsam,
-              pariatur dicta error sapiente aliquam recusandae eligendi, praesentium modi animi qui libero fugiat
-              asperiores
-              nostrum itaque quae. Ullam, distinctio aspernatur doloribus velit quibusdam ipsum corporis ex accusantium
-              esse
-              enim architecto, quia quidem minus amet suscipit nam at, est ipsa. Autem dolores nulla repellendus,
-              quibusdam
-              minima eos dignissimos labore velit enim.
-            </p>
+            <div class="location-listing">
+              <div class="musicboxes">
+                <!-- <a class="location-title" href="#">Spine</a> -->
+                <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/2.jpg" alt="ghost"></a></div>
+                <div class="buttons">
+                  <button class="play" id="s1" onclick="playOrPauseSong(1)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(1)"><img
+                      src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill1"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="location-listing">
+              <div class="musicboxes">
+                <!-- <a class="location-title" href="#">Spine</a> -->
+                <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/3.jpg" alt="books"></a></div>
+                <div class="buttons">
+                  <button class="play" id="s2" onclick="playOrPauseSong(2)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(2)"><img
+                      src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="location-listing">
+              <div class="musicboxes">
+                <!-- <a class="location-title" href="#">Spine</a> -->
+                <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/4.jpg" alt="train"></a></div>
+                <div class="buttons">
+                  <button class="play" id="s3" onclick="playOrPauseSong(3)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(3)"><img
+                      src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill3"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="location-listing">
+              <div class="musicboxes">
+                <!-- <a class="location-title" href="#">Spine</a> -->
+                <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/5.jpg" alt="tube"></a></div>
+                <div class="buttons">
+                  <button class="play" id="s4" onclick="playOrPauseSong(4)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(4)"><img
+                      src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill4"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
       </section>
     </main>
     <section id="footer">
@@ -115,15 +145,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="node_modules/swup/dist/swup.min.js"></script>
   <script src="./assets/js/app.js"></script>
-  <script>
-    var fillBar = document.getElementById("fill");
-
-    sound.addEventListener('timeupdate', function () {
-      var position = sound.currentTime / sound.duration;
-
-      fillBar.style.width = position * 100 + '%';
-    });
-  </script>
 </body>
 
 </html>
