@@ -3,6 +3,38 @@ body
   
 #gallery
 
+.grid-title
+  margin: 50px 50px
+  padding: 0px 50px
+
+.show-title
+  text-align: center
+  padding: 15px
+
+.heading
+  display: inline-block
+  position: relative
+  max-width: 80%
+  &:before
+    right: 100%
+  &:after
+    left: 100% 
+  &:after,
+  &:before
+    content: ""
+    width: 100px
+    height: 1px
+    position: absolute
+    margin: 0 17px
+    background: #000
+    top: 50%
+
+.blurb-box
+  padding-top: 10px
+  text-align: justify
+  @media only screen and (max-width: 680px)
+    text-align: center
+
 .musicbox
   padding: 25px
   color:#333

@@ -336,6 +336,19 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+.credits {
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 1px;
+  color: #3c3b3b;
+  font-weight: lighter; }
+  @media only screen and (max-width: 680px) {
+    .credits {
+      font-size: 10px; } }
+
+.blurb {
+  line-height: 1.3; }
+
 .banner {
   display: flex;
   align-items: center;
@@ -569,6 +582,38 @@ html.is-animating .transition-move {
 
 body {
   height: 100%; }
+
+.grid-title {
+  margin: 50px 50px;
+  padding: 0px 50px; }
+
+.show-title {
+  text-align: center;
+  padding: 15px; }
+
+.heading {
+  display: inline-block;
+  position: relative;
+  max-width: 80%; }
+  .heading:before {
+    right: 100%; }
+  .heading:after {
+    left: 100%; }
+  .heading:after, .heading:before {
+    content: "";
+    width: 100px;
+    height: 1px;
+    position: absolute;
+    margin: 0 17px;
+    background: #000;
+    top: 50%; }
+
+.blurb-box {
+  padding-top: 10px;
+  text-align: justify; }
+  @media only screen and (max-width: 680px) {
+    .blurb-box {
+      text-align: center; } }
 
 .musicbox {
   padding: 25px;
