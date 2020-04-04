@@ -244,7 +244,7 @@ input[type="button"] {
     outline: 0;
     transform: scale(1.01);
     transform: translateY(3px);
-    box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5); }
+    box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5); }
 
 a {
   color: white;
@@ -414,7 +414,7 @@ hr {
     .grid-item {
       max-width: 512px;
       margin: 0 auto;
-      box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5); } }
+      box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5); } }
 
 .nav-photo {
   line-height: 0;
@@ -460,7 +460,9 @@ hr {
 
 .home {
   max-width: 1100px;
-  margin: 0 auto; }
+  margin: 25px auto 25px auto;
+  background: #313747;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.5); }
 
 .nico {
   display: flex;
@@ -470,22 +472,23 @@ hr {
     .nico {
       display: block; } }
   .nico img {
-    box-shadow: 3px 3px 12px 0px rgba(0, 0, 0, 0.5);
-    margin: 5% 0 5% 5%;
+    margin: 25px 0 25px 5%;
     width: 50%;
     align-self: center;
     max-width: 390px; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 762px) {
       .nico img {
         display: none; } }
   .nico .content {
     width: 50%;
-    margin: 10% 10% auto 5%; }
-    @media screen and (max-width: 600px) {
+    margin: 25px 10%;
+    text-align: center; }
+    .nico .content h3, .nico .content p {
+      color: #f6f7eb; }
+    @media screen and (max-width: 762px) {
       .nico .content {
         margin: 5% auto;
-        width: 80%;
-        text-align: center; }
+        width: 80%; }
         .nico .content h3 {
           font-size: 3em; } }
 
