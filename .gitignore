@@ -142,5 +142,9 @@ temp/
 *.sass.map
 *.scss.map
 
+# photoshop files
+.psd
+*.psd
+
 # End of https://www.gitignore.io/api/node,sass,macos
 node_modules

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.min.css" />
   <script src="./assets/js/slide-menu.js"></script>
-  <script defer src="node_modules/swup/dist/swup.min.js"></script>
 </head>
 
 <body>
@@ -43,34 +42,54 @@
     <section id="header">
       <div class="wrapper">
         <div class="banner">
-          <div class="headline">
+          <div class="headline" id="hl">
             <a href="index.html">
               <h1>Nico Dicecco</h1>
             </a>
           </div>
     </section>
     <main class="transition-fade transition-move transition-scale">
-      <section id="nav">
-        <div class="wrapper">
-          <div class="grid-container">
-            <h3>Paperwork</h3>
-            <p class="big">Create a new grid here for paperwork samples</p>
-          </div>
-      </section>
-      <section class="home">
-        <div class="nico">
-          <img src="/assets/img/nico-sm.jpg" alt="in the office">
-          <div class="content">
-            <h3>
-              Stage Management
-            </h3>
-            <p class="big">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem, earum possimus numquam totam impedit, maiores nam culpa alias tenetur cupiditate, ex a? Repellat enim quod deleniti! Aspernatur, dignissimos? Quibusdam.
-            Nisi, iusto iste tempora enim dignissimos, molestiae sed natus aspernatur, sit molestias impedit voluptate veniam cumque commodi ut earum expedita maiores. Recusandae quasi, necessitatibus est dolorem soluta deleniti culpa aperiam!
-            Atque quaerat consequatur nulla eos obcaecati. Possimus corrupti debitis ullam veritatis earum necessitatibus omnis provident nam voluptates, eius eos. Soluta dolorem ipsa impedit pariatur corrupti quia itaque quibusdam, odit consequuntur.
-            </p>
+      <div class="wrapper">
+        <div class="gridcon">
+          <div class="slide">
+            <div class="box-spot">
+              <div class="boxstuff">
+                <img src="./assets/img/perf-report-2.jpg" alt="" class="box-image" id="lastClone">
+                <img src="./assets/img/contact.jpg" alt="" class="box-image" id="contact">
+                <img src="./assets/img/pre-post.jpg" alt="" class="box-image" id="pre-post">
+                <img src="./assets/img/prop-inv.jpg" alt="" class="box-image" id="prop-inv">
+                <img src="./assets/img/prop-prst.jpg" alt="" class="box-image" id="prop-prst">
+                <img src="./assets/img/rhsl-report-1.jpg" alt="" class="box-image" id="rhsl-report-1">
+                <img src="./assets/img/rhsl-report-2.jpg" alt="" class="box-image" id="rhsl-report-2">
+                <img src="./assets/img/perf-report-2.jpg" alt="" class="box-image" id="perf-report-2">
+                <img src="./assets/img/perf-report-2.jpg" alt="" class="box-image" id="perf-report-2">
+                <img src="./assets/img/contact.jpg" alt="" class="box-image" id="firstClone">
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        <button id="prevBtn">Prev</button>
+        <button id="nextBtn" onclick="nextImage()">Next</button>
+        <section class="home">
+          <div class="nico">
+            <img src="/assets/img/nico-sm.jpg" alt="in the office">
+            <div class="content">
+              <h3>
+                Stage Management
+              </h3>
+              <p class="big">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur exercitationem, earum
+                possimus numquam totam impedit, maiores nam culpa alias tenetur cupiditate, ex a? Repellat enim quod
+                deleniti! Aspernatur, dignissimos? Quibusdam.
+                Nisi, iusto iste tempora enim dignissimos, molestiae sed natus aspernatur, sit molestias impedit
+                voluptate veniam cumque commodi ut earum expedita maiores. Recusandae quasi, necessitatibus est dolorem
+                soluta deleniti culpa aperiam!
+                Atque quaerat consequatur nulla eos obcaecati. Possimus corrupti debitis ullam veritatis earum
+                necessitatibus omnis provident nam voluptates, eius eos. Soluta dolorem ipsa impedit pariatur corrupti
+                quia itaque quibusdam, odit consequuntur.
+              </p>
+            </div>
+          </div>
+        </section>
     </main>
     <section id="footer">
       <div class="wrapper">
@@ -81,7 +100,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="node_modules/swup/dist/swup.min.js"></script>
   <script src="./assets/js/app.js"></script>
-  <script src="./assets/js/vendors.js"></script>
 </body>
 
 </html>

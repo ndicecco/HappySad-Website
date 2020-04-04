@@ -1,0 +1,178 @@
+body
+  height: 100%
+  
+#gallery
+  margin: 0 auto
+
+.inner-wrap-odd,
+.inner-wrap-even
+  max-width: 1300px
+  margin: 0 auto
+  padding-bottom: 1em
+  
+.inner-wrap-odd
+  background: none
+
+.inner-wrap-even
+  background: none
+
+.grid-title
+  margin: 30px 50px 50px 50px
+  padding: 0px 50px
+
+.show-title
+  text-align: center
+  padding: 15px
+
+.heading
+  display: inline-block
+  position: relative
+  max-width: 80%
+  &:before
+    right: 100%
+  &:after
+    left: 100% 
+  &:after,
+  &:before
+    content: ""
+    width: 100px
+    height: 1px
+    position: absolute
+    margin: 0 17px
+    background: #000
+    top: 50%
+
+.blurb-box
+  padding-top: 10px
+  text-align: justify
+  @media only screen and (max-width: 680px)
+    text-align: center
+
+.musicboxes
+  height: 150px
+  width: 150px
+  background-color: $tertiary
+  border-radius: 15px
+
+.buttons
+  height: 100%
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.play
+  transform: translateX(-30px)
+  width: 40px
+  height: 40px
+  border: none
+  border-radius: 50%
+  outline: none
+  cursor: pointer
+  position: absolute
+  background: $shadow
+  img
+    position: absolute
+    width: 40px
+    height: 40px
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  &:hover,
+  &:active,
+  &:focus
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, .75)
+    background: none
+    outline: 0
+    transform: scale(1.01)
+    transform: translate(-30px, 1px)
+
+.restart
+  transform: translateX(30px)
+  width: 40px
+  height: 40px
+  border: none
+  border-radius: 50%
+  outline: none
+  cursor: pointer
+  position: absolute
+  background: $shadow
+  img
+    position: absolute
+    height: 40px
+    width: 40px
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+  &:hover,
+  &:active,
+  &:focus
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, .75)
+    background: none
+    outline: 0
+    transform: scale(1.01)
+    transform: translate(30px, 1px)
+
+#seek-bar
+  width: 130px
+  height: 5px
+  background-color: $dark
+  display: flex
+  border-radius: 50px
+  margin: 0 auto
+  cursor: pointer
+  transform: translateY(34px)
+
+#fill0,
+#fill1,
+#fill2,
+#fill3,
+#fill4,
+#fill5,
+#fill6,
+#fill7,
+#fill8,
+#fill9,
+#fill10,
+#fill11
+  height: 5px
+  background-color: $highlight
+  border-radius: 20px
+
+#handle
+  width: 8px
+  height: 8px
+  background-color: white
+  border-radius: 50%
+  margin-left: -5px
+  transform: scale(2)
+
+.grid-containment
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))
+  grid-gap: 1em
+  margin: 0 auto
+  max-width: 50%
+
+.location-listing 
+  position: relative
+  margin: 0 auto
+ 
+.location-title
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100% 
+  /* typographic styles */
+  color: $offwt
+  font-size: 0.8em
+  font-weight: lighter
+  text-decoration: none 
+  /* position the text centrally*/
+  display: flex
+  justify-content: center
+  transform: translateY(15px)
+
+.location-image
+  line-height: 0

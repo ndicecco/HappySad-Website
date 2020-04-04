@@ -2,13 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,900')
 @import url('https://fonts.googleapis.com/css?family=Asap&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap')
 
 .gigantic, .huge, .large, .bigger, .big,
-h1, h2, h3, h4, h5, h6
-  color: #222
-  font-weight: bold
+h1, h2, h3, h4, h5, h6, a, p
+  color: $dark
   font-family: 'Asap', sans-serif
-  font-weight: 900
+  font-weight: 400
+  
+.gigantic, .huge, .large, .bigger, .big,
+h1, h2, h3, h4, h5, h6
   text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07)
 
 .gigantic
@@ -56,7 +59,12 @@ em
   font-style: italic
 
 strong
-  font-weight: bold
+  font-weight: 900
+
+.light
+  font-weight: lighter
+  margin: 0px
+  padding: 0px
 
 hr
   border: solid #ddd
@@ -70,7 +78,7 @@ hr
   text-transform: uppercase
   font-size: 12px
   margin-bottom: 1px
-  color: #3c3b3b
+  color: $dark
   font-weight: lighter
   @media only screen and (max-width: 680px)
     font-size: 10px

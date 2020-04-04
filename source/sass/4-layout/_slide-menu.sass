@@ -5,7 +5,7 @@
     z-index: 1
     top: 0
     left: 0
-    background-color: #111
+    background-color: $dark
     opacity: 0.97
     overflow-x: hidden
     padding-top: 60px
@@ -17,12 +17,12 @@
         padding: 20px 30px
         font-size: 22px
         font-family: asap
-        color: #ccc
+        color: $offwt
         transition: 0.3s
 
         &:hover,
         &:focus
-            color: #fff
+            color: $white
             transition: 0.4s
 
     .close
@@ -33,23 +33,23 @@
         font-size: 30px
 
 #ex
-    fill: #ccc
+    fill: $offwt
     opacity: 0.2
     transition: 0.4s
 
     &:hover
-        fill: #fff
+        fill: $white
         opacity: 0.5
         transition: 0.4s
 
 #hamburger
-    fill: #fff
+    fill: $offwt
     transition: 0.4s
     opacity: 1
 
     &:hover
-        fill: #ccc
-        transition: 0.4s
+        fill: $dark
+        transition: 0.4s ease
         opacity: 0.5
 
 #menu
@@ -61,3 +61,8 @@
     transition: margin-left 1s
     overflow: hidden
     width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 10
+    opacity: 0.9

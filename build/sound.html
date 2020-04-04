@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <div class="bg-wrap">
+  <div id="swup" class="bg-wrap">
     <div id="content">
       <span class="slide">
         <a href="#" onclick="openSlideMenu()">
@@ -43,15 +43,15 @@
     <section id="header">
       <div class="wrapper">
         <div class="banner">
-          <div class="headline">
+          <div class="headline" id="hl">
             <a href="index.html">
               <h1>Nico Dicecco</h1>
             </a>
           </div>
     </section>
-    <main id="swup" class="transition-move transition-fade">
+    <main class="transition-move transition-fade">
       <section id="gallery">
-        <div class="wrapper">
+        <div class="inner-wrap-odd">
           <div class="grid-title">
             <h3 class="show-title">
               <div class="heading">
@@ -80,9 +80,9 @@
           <div class="grid-containment">
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/1.jpg" alt="waltz"></a></div>
+                <a class="location-title" href="#">Music Box Waltz</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/1.jpg" alt="waltz"></a></div> -->
                 <div class="buttons">
                   <button class="play" id="s0" onclick="playOrPauseSong(0)"><img src="./assets/img/play.png" /></button>
                   <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
@@ -94,9 +94,9 @@
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/2.jpg" alt="ghost"></a></div>
+                <a class="location-title" href="#">Ghost Theme</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/2.jpg" alt="ghost"></a></div> -->
                 <div class="buttons">
                   <button class="play" id="s1" onclick="playOrPauseSong(1)"><img src="./assets/img/play.png" /></button>
                   <button class="restart" onclick="resetSong(1)"><img src="./assets/img/Restart.png" /></button>
@@ -108,9 +108,9 @@
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/3.jpg" alt="books"></a></div>
+                <a class="location-title" href="#">Glenda</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/3.jpg" alt="books"></a></div> -->
                 <div class="buttons">
                   <button class="play" id="s2" onclick="playOrPauseSong(2)"><img src="./assets/img/play.png" /></button>
                   <button class="restart" onclick="resetSong(2)"><img src="./assets/img/Restart.png" /></button>
@@ -122,9 +122,9 @@
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/4.jpg" alt="train"></a></div>
+                <a class="location-title" href="#">Underground</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/4.jpg" alt="train"></a></div> -->
                 <div class="buttons">
                   <button class="play" id="s3" onclick="playOrPauseSong(3)"><img src="./assets/img/play.png" /></button>
                   <button class="restart" onclick="resetSong(3)"><img src="./assets/img/Restart.png" /></button>
@@ -136,9 +136,9 @@
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/5.jpg" alt="tube"></a></div>
+                <a class="location-title" href="#">Victoria Line</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/5.jpg" alt="tube"></a></div> -->
                 <div class="buttons">
                   <button class="play" id="s4" onclick="playOrPauseSong(4)"><img src="./assets/img/play.png" /></button>
                   <button class="restart" onclick="resetSong(4)"><img src="./assets/img/Restart.png" /></button>
@@ -148,7 +148,23 @@
                 </div>
               </div>
             </div>
+            <div class="location-listing">
+              <div class="musicboxes">
+                <a class="location-title" href="#">Wobble</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/6.jpg" alt="tube"></a></div> -->
+                <div class="buttons">
+                  <button class="play" id="s5" onclick="playOrPauseSong(5)"><img src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(5)"><img src="./assets/img/Restart.png" /></button>
+                  <div id="seek-bar">
+                    <div id="fill5"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+        <div class="inner-wrap-even">
           <div class="grid-title">
             <h3 class="show-title">
               <div class="heading">
@@ -178,75 +194,49 @@
           <div class="grid-containment">
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/1.jpg" alt="waltz"></a></div>
+                <a class="location-title" href="#">Jenga</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/7.jpg" alt="waltz"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s0" onclick="playOrPauseSong(0)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s6" onclick="playOrPauseSong(6)"><img src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(6)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill0"></div>
+                    <div id="fill6"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/2.jpg" alt="ghost"></a></div>
+                <a class="location-title" href="#">Whalesong</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/8.jpg" alt="ghost"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s1" onclick="playOrPauseSong(1)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(1)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s7" onclick="playOrPauseSong(7)"><img src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(7)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill1"></div>
+                    <div id="fill7"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/3.jpg" alt="books"></a></div>
+                <a class="location-title" href="#">Uptown Cabaret</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/9.jpg" alt="books"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s2" onclick="playOrPauseSong(2)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(2)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s8" onclick="playOrPauseSong(8)"><img src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(8)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill2"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="location-listing">
-              <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/4.jpg" alt="train"></a></div>
-                <div class="buttons">
-                  <button class="play" id="s3" onclick="playOrPauseSong(3)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(3)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="location-listing">
-              <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/5.jpg" alt="tube"></a></div>
-                <div class="buttons">
-                  <button class="play" id="s4" onclick="playOrPauseSong(4)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(4)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill4"></div>
+                    <div id="fill8"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+        <div class="inner-wrap-odd">
           <div class="grid-title">
             <h3 class="show-title">
               <div class="heading">
@@ -254,7 +244,7 @@
               </div>
             </h3>
             <p class="credits"><strong>Directed by</strong> Tamara McCarthy</p>
-            <p class="credits"><strong>Featuring</strong> Melissa Oei, 
+            <p class="credits"><strong>Featuring</strong> Melissa Oei,
               Eric Regimbald,
               Maria J. Cruz,
               Sandra Medeiros,
@@ -272,13 +262,13 @@
               Aias Dalman,
               Peter Gereb,
               Alix Lefler</p>
-              <p class="credits"><strong>Stage Management, Sound Design by</strong> Nico Dicecco</p>
-              <p class="credits"><strong>Choreography by</strong> Melissa Sciaretta</p>
-              <p class="credits"><strong>Set Design by</strong> Ariel Slack</p>
-              <p class="credits"><strong>Lighting Design by</strong> Taylor Janzen</p>
-              <p class="credits"><strong>Costumes & Props by</strong> Ella Heatley-Mulhall</p>
-              <p class="credits"><strong>Photography by</strong> Angelo Renai</p>
-              <p class="credits"><strong>Scenic Painting by</strong> Hristina Hristozova</p>
+            <p class="credits"><strong>Stage Management & Sound Design by</strong> Nico Dicecco</p>
+            <p class="credits"><strong>Assistant Directed by</strong> Sandra Medeiros</p>
+            <p class="credits"><strong>Set Design by</strong> Daniel Wiebe</p>
+            <p class="credits"><strong>Lighting Design by</strong> Celeste English</p>
+            <p class="credits"><strong>Costumes & Props by</strong> Ella Heatley-Mulhall</p>
+            <p class="credits"><strong>Photography by</strong> Angelo Renai</p>
+            <p class="credits"><strong>Scenic Painting by</strong> Hristina Hristozova</p>
             <div class="blurb-box">
               <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit quasi harum perspiciatis
                 a? Delectus sint ea animi, at veniam perspiciatis voluptatem magni quas deleniti repellat commodi
@@ -293,75 +283,50 @@
           <div class="grid-containment">
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/1.jpg" alt="waltz"></a></div>
+                <a class="location-title" href="#">Jingle Bells</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/10.jpg" alt="waltz"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s0" onclick="playOrPauseSong(0)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s9" onclick="playOrPauseSong(9)"><img src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(9)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill0"></div>
+                    <div id="fill9"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/2.jpg" alt="ghost"></a></div>
+                <a class="location-title" href="#">Deck the Halls</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/11.jpg" alt="ghost"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s1" onclick="playOrPauseSong(1)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(1)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s10" onclick="playOrPauseSong(10)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(10)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill1"></div>
+                    <div id="fill10"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="location-listing">
               <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/3.jpg" alt="books"></a></div>
+                <a class="location-title" href="#">Away in the Manger</a>
+                <!-- <div class="location-image"><a href="#">
+                    <img width="300" height="300" src="./assets/img/12.jpg" alt="books"></a></div> -->
                 <div class="buttons">
-                  <button class="play" id="s2" onclick="playOrPauseSong(2)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(2)"><img src="./assets/img/Restart.png" /></button>
+                  <button class="play" id="s11" onclick="playOrPauseSong(11)"><img
+                      src="./assets/img/play.png" /></button>
+                  <button class="restart" onclick="resetSong(11)"><img src="./assets/img/Restart.png" /></button>
                   <div id="seek-bar">
-                    <div id="fill2"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="location-listing">
-              <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/4.jpg" alt="train"></a></div>
-                <div class="buttons">
-                  <button class="play" id="s3" onclick="playOrPauseSong(3)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(3)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill3"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="location-listing">
-              <div class="musicboxes">
-                <!-- <a class="location-title" href="#">Spine</a> -->
-                <div class="location-image"><a href="#">
-                    <img width="300" height="300" src="./assets/img/5.jpg" alt="tube"></a></div>
-                <div class="buttons">
-                  <button class="play" id="s4" onclick="playOrPauseSong(4)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(4)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill4"></div>
+                    <div id="fill11"></div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </section>
     </main>
     <section id="footer">
