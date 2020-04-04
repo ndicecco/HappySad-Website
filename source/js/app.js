@@ -1,22 +1,24 @@
+import Swup from 'swup';
+const swup = new Swup();
 
-const carouselSlide = document.querySelector('.slide');
-const carouselImages = document.querySelectorAll('.slide img');
+// const carouselSlide = document.querySelector('.slide');
+// const carouselImages = document.querySelectorAll('.slide img');
 
-//Buttons
-const prevBtn = document.querySelector('#prevBtn');
-const nextBtn = document.querySelector('#nextBtn');
+// //Buttons
+// const prevBtn = document.querySelector('#prevBtn');
+// const nextBtn = document.querySelector('#nextBtn');
 
-//Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
+// //Counter
+// let counter = 1;
+// const size = carouselImages[0].clientWidth;
 
-carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
+// carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
 
-//Button Listeners
-function nextImage(){
-    counter++;
-    console.log(counter);
-};
+// //Button Listeners
+// function nextImage(){
+//     counter++;
+//     console.log(counter);
+// };
 
 
 //GSAP Animations

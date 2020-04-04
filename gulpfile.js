@@ -50,7 +50,7 @@ let vendorDest = 'build/assets/js/';
 let jsSRC = 'app.js';
 let jsFolder = 'source/js/';
 let scriptSrc = 'source/js/**/*.js';
-let jsFILES = [jsSRC, 'musicbox.js', 'slide-menu.js', 'scrollreveal.js'];
+let jsFILES = [jsSRC];
 let scriptDest = 'build/assets/js/';
 
 let htmlSrc = 'source/';
