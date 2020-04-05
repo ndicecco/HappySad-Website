@@ -51,8 +51,11 @@ body
 .musicboxes
   height: 150px
   width: 150px
-  background-color: $tertiary
+  background-color: $dark
   border-radius: 15px
+  cursor: default
+  a
+    cursor: default
 
 .buttons
   height: 100%
@@ -60,6 +63,7 @@ body
   display: flex
   align-items: center
   justify-content: center
+  cursor: pointer
 
 .play
   transform: translateX(-30px)
@@ -116,12 +120,12 @@ body
 #seek-bar
   width: 130px
   height: 5px
-  background-color: $dark
+  background-color: $tertiary
   display: flex
   border-radius: 50px
   margin: 0 auto
-  cursor: pointer
   transform: translateY(34px)
+  cursor: default
 
 #fill0,
 #fill1,
