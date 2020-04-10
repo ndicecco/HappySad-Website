@@ -380,7 +380,12 @@ hr {
       .banner .headline {
         top: 0px; }
         .banner .headline h1 {
-          font-size: 2em; } }
+          font-size: 2em;
+          margin: 0.46em auto; } }
+    @media screen and (max-width: 340px) {
+      .banner .headline h1 {
+        font-size: 1.7em;
+        margin: 0.75em auto; } }
 
 #hl {
   opacity: 1;
@@ -793,6 +798,7 @@ body {
 
 .talkbox {
   display: block;
+  z-index: 2;
   margin: 0 10px 0 10px;
   min-height: 90vh;
   max-width: 45vw;
@@ -802,10 +808,14 @@ body {
   @media screen and (max-width: 1028px) {
     .talkbox {
       left: 0px; } }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 690px) {
     .talkbox {
       display: inline;
       float: none;
+      margin: 0 auto;
+      text-align: center;
+      max-width: 100vw;
+      min-height: 0px;
       left: 0px; } }
 
 .papercon {
@@ -815,10 +825,16 @@ body {
   max-width: 45vw;
   min-width: 153px;
   float: left;
-  left: 86px;
-  overflow: hidden; }
+  left: 86px; }
   @media screen and (max-width: 1028px) {
     .papercon {
+      left: 0px; } }
+  @media screen and (max-width: 690px) {
+    .papercon {
+      display: inline;
+      float: none;
+      max-width: 100vw;
+      min-height: 0px;
       left: 0px; } }
   @media screen and (max-width: 480px) {
     .papercon {
@@ -828,6 +844,7 @@ body {
 
 .gridcon {
   display: grid;
+  max-width: 600px;
   margin: 10px auto;
   padding: 0;
   grid-template-columns: repeat(auto-fill, minmax(153px, 1fr));
@@ -836,20 +853,63 @@ body {
 
 .paper {
   align-self: center;
-  justify-self: center; }
+  justify-self: center;
+  display: inline; }
   .paper img {
     max-height: 198px;
     max-width: 153px; }
   .paper:hover .title, .paper:active .title, .paper:focus .title {
     opacity: 1;
     color: #EAF2EF; }
-  .paper:hover img, .paper:active img, .paper:focus img {
-    transform: scale(1.1);
-    transition: 0.4s ease-in-out;
-    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3); }
   @media screen and (max-width: 733px) {
     .paper {
       max-width: 512px;
       margin: 0 auto; } }
+
+.bigbox {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0%;
+  left: 0%;
+  margin-left: -50%;
+  margin-top: 30%;
+  max-width: 600px;
+  min-width: 420px;
+  z-index: 10; }
+  @media screen and (max-width: 768px) {
+    .bigbox {
+      margin-left: -100%;
+      margin-top: 5%; } }
+  @media screen and (max-width: 480px) {
+    .bigbox {
+      display: none; } }
+
+.bigpaper {
+  border: solid black 5px;
+  background: #fff;
+  width: 90%;
+  height: auto;
+  margin: 0 auto; }
+  .bigpaper a {
+    color: black; }
+  .bigpaper img {
+    display: block;
+    width: 100%; }
+  @media screen and (max-width: 1028px) {
+    .bigpaper {
+      width: 100%; } }
+  @media screen and (max-width: 480px) {
+    .bigpaper {
+      width: 100%; } }
+
+.blur {
+  display: none;
+  background: #23252879;
+  height: 90vh;
+  width: 100%;
+  position: absolute;
+  z-index: 5; }
 
 /*# sourceMappingURL=main.min.css.map */

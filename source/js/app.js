@@ -1,54 +1,67 @@
 import Swup from 'swup';
 const swup = new Swup();
 
-// //Carousel for Stage Management page
-// const carouselSlide = document.querySelector('.paperslide');
-// const carouselImages = document.querySelectorAll('.paperslide img');
 
-// //Buttons
-// const prevBtn = document.querySelector('#prevBtn');
-// const nextBtn = document.querySelector('#nextBtn');
+function init() {
+  if (document.querySelector('#paperwork')) {
+    //Paperwork Gallery
+    const bigBox = document.querySelector('.bigbox');
+    const bigPaper = document.querySelector('.bigpaper img');
+    const bigPaperDiv = document.querySelector('.bigpaper');
+    const docArray = document.querySelectorAll('.paper img');
+    const blurBox = document.querySelector('.blur');
+    const wrapper = document.querySelector('.wrapper');
+    const screenWidth = window.innerWidth || document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    let paperSource = '';
 
-// //Counter
-// let counter = 1;
-// const size = carouselImages[0].clientWidth;
+    function addListeners() {
+      for (let j = 0; j < docArray.length; j++) {
+        docArray[j].addEventListener("click", embiggen);
+      }
+    }
 
-// //Button Listeners
-// nextBtn.addEventListener('click', ()=>{
-//     if(counter >= carouselImages.length - 1) return;
-//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
-//     counter++;
-//     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-// });
+    function embiggen() {
+      const screenWidth = window.innerWidth || document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      paperSource = this.getAttribute('src');
+      bigPaper.src = paperSource;
+      bigBox.style.display = 'inherit';
 
-// prevBtn.addEventListener('click', ()=>{
-//     if(counter <=0) return;
-//     carouselSlide.style.transition = "transform 0.4s ease-in-out";
-//     counter--;
-//     carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-// });
+      if (bigPaper.naturalWidth > bigPaper.naturalHeight) {
+        console.log(' ' + bigPaper.naturalWidth + ' ' + bigPaper.naturalHeight);
+        console.log(' ' + bigPaper.clientWidth + ' ' + bigPaper.clientHeight);
+      }
+      if (screenWidth <= 690) {
+        console.log(screenWidth);
+        bigBox.style.minWidth = '0px';
+        bigBox.style.width = screenWidth + 'px';
+        bigPaperDiv.style.border = 'none';
+        wrapper.classList.add('.blur');
+        bigBox.addEventListener("click", shrink);
+        return;
+      }
+      blurBox.style.display = 'inherit';
+      blurBox.addEventListener("click", shrink);
+    }
 
-// carouselSlide.addEventListener('transitionend', ()=>{
-//     if(carouselImages[counter].id==='lastClone'){
-//         carouselSlide.style.transition = "none";
-//         counter = carouselImages.length-2;
-//         carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-//     }
-//     if(carouselImages[counter].id==='firstClone'){
-//         carouselSlide.style.transition = "none";
-//         counter = carouselImages.length-counter;
-//         carouselSlide.style.transform = 'translateX(' + (-size * counter ) + 'px)';
-//     }
-// });
+    function shrink() {
+      bigBox.style.display = 'none';
+      if (screenWidth <= 690) {
+        bigBox.removeEventListener("click", shrink);
+        return;
+      }
+      blurBox.style.display = 'none';
+      blurBox.removeEventListener("click", shrink);
+    }
 
+    addListeners();
+    //end Paperwork Gallery
+  }
+}
 
+//initialize scripts
+init();
 
-//--- end carousel script
-
-//GSAP Animations
-// var tl = gsap.timeline();
-// tl.from(".headline", {duration: 2, opacity: 0}, "0.8");
-// tl.from(".grid-item-1", {duration: 1, x: -5, y: -5, opacity: 0}, 0);
-// tl.from(".grid-item-2", {duration: 1, x: 5, y: -5, opacity: 0}, 0.2);
-// tl.from(".grid-item-3", {duration: 1, x: -5, y: 5, opacity: 0}, 0.4);
-// tl.from(".grid-item-4", {duration: 1, x: 5, y: 5, opacity: 0}, 0.6);
+// this event runs for every page view after initial load
+swup.on('contentReplaced', init);
