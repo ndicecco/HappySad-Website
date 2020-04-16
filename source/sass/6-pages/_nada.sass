@@ -1,0 +1,129 @@
+.hs-wrap
+    background: $yellow
+    max-width: 1440px
+    margin: 0 auto
+
+#hlhs
+    text-transform: lowercase
+    font-size: 0.9em
+    line-height: 1em
+    h1
+        float: left
+
+#happy
+    color: $yellow
+    font-weight: 100
+
+#sad
+    color: $blue
+
+#theatre
+    color: $offwt
+    margin-left: 10px
+
+.hero
+    width: 100%
+    line-height: 0px
+
+.heroimg
+    max-width: 1400px
+    width: 100%
+    height: auto
+    display: block
+
+.happynav
+    margin: 0 auto
+    text-align: center
+    ul
+        list-style: none
+        li
+            font-size: 60px
+            transition: 0.3s ease-in-out
+            &:hover,
+            &:active,
+            &:focus
+                background-color: $altyellow
+                @include altshadow2
+            a
+                color: $tertiary
+
+#about
+    background-color: $white
+    padding-top: 1px
+
+.happyhl
+    width: 100%
+    h1
+        color: $tertiary
+        text-align: center
+        margin: 10px
+
+.hsblurb
+    padding: 15px 0 0 0
+    margin: 0 auto
+    text-align: center
+    p
+        color: $tertiary
+        margin: 0px
+        padding-bottom: 15px
+
+.yellowbox
+    background-color: $yellow
+
+.happyhead
+    color: $tertiary
+    text-align: center
+    padding: 10px 0
+
+.whitebox
+    background-color: $white
+
+#projects
+    h3
+        padding: 10px
+
+.hslist
+    text-align: center
+    padding: 15px
+    ul
+        text-decoration: none
+        list-style: none
+    h4, p
+        color: $tertiary
+
+.quotes
+    background: $altyellow
+    width: 85%
+    margin: 0.5em auto 0
+    padding: 1em
+    blockquote 
+        display: block
+        color: $secondary
+        line-height: 1.4em
+        font-style: italic 
+        border-width: 2px 0
+        border-style: solid
+        border-color: $wtshadow
+        padding: 1.5em 0 0.5em
+        margin: 1.5em 0
+        position: relative
+    blockquote:before
+        content: '\201C'
+        position: absolute
+        top: 0em
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 3rem
+        height: 2rem
+        font: 4em/1.08em 'PT Sans', sans-serif
+        color: $shadow
+        text-align: center
+    blockquote:after 
+        content: "\2013 \2003" attr(cite)
+        font-style: normal
+        display: block
+        text-align: right
+        font-size: 0.875em
+        color: $shadow
+
+
