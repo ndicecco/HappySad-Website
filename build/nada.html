@@ -6,7 +6,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.min.css" />
-  <script src="./assets/js/slide-menu.js"></script>
   <script src="./assets/js/musicbox.js"></script>
 </head>
 
@@ -14,9 +13,9 @@
   <div id="swup" class="hs-wrap">
     <div id="content">
       <span class="slide">
-        <a href="#" onclick="openSlideMenu()">
+        <a href="#">
           <svg width="58" height="39" xmlns="http://www.w3.org/2000/svg">
-            <g id="hamburger" fill="#fff" fill-rule="evenodd">
+            <g id="hamburger" fill-rule="evenodd">
               <rect y="30" width="45" height="9" rx="4.5" />
               <rect width="45" height="9" rx="4.5" />
               <rect y="15" width="45" height="9" rx="4.5" />
@@ -25,7 +24,7 @@
         </a>
       </span>
       <div id="menu" class="side-nav">
-        <a href="#" class="close" onclick="closeSlideMenu()">
+        <a href="#" class="close">
           <svg width="44" height="45" xmlns="http://www.w3.org/2000/svg">
             <g id="ex" transform="translate(-2 -2)" fill="#ccc" fill-rule="evenodd">
               <rect transform="rotate(45 24 24.5)" x="-5" y="20" width="58" height="9" rx="4.5" />
@@ -33,11 +32,11 @@
             </g>
           </svg>
         </a>
-        <a class="nav-links" href="/index.html" onclick="closeSlideMenu()">Home</a>
-        <a class="nav-links" href="/stage.html" onclick="closeSlideMenu()">Stage Management</a>
-        <a class="nav-links" href="/sound.html" onclick="closeSlideMenu()">Sound Design</a>
-        <a class="nav-links" href="/prod.html" onclick="closeSlideMenu()">Production Management</a>
-        <a class="nav-links" href="/nada.html" onclick="closeSlideMenu()">HappySad Theatre</a>
+        <a class="nav-links" href="/index.html">Home</a>
+        <a class="nav-links" href="/stage.html">Stage Management</a>
+        <a class="nav-links" href="/sound.html">Sound Design</a>
+        <a class="nav-links" href="/prod.html">Production Management</a>
+        <a class="nav-links" href="/nada.html">HappySad Theatre</a>
       </div>
     </div>
     <section id="header">
@@ -56,7 +55,7 @@
         <div class="hero">
           <img src="./assets/img/sbic-1.jpg" alt="" class="heroimg">
         </div>
-        <div class="happynav">
+        <div id="happynav">
           <ul>
             <li><a href="#about">about us</a></li>
             <li><a href="#projects">projects</a></li>
@@ -64,9 +63,6 @@
           </ul>
         </div>
         <section id="about">
-          <div class="happyhl">
-            <h1>about us</h1>
-          </div>
           <div class="hero">
             <img src="./assets/img/nicokyle.jpg" alt="" class="heroimg">
           </div>
@@ -107,26 +103,31 @@
           </div>
         </section>
         <section id="projects">
-          <div class="happyhl">
-            <h1>projects</h1>
+          <div class="hero">
+            <img src="./assets/img/sbic-2.jpg" alt="" class="heroimg">
           </div>
-          <div class="yellowbox">
-            <h3 class="happyhead">
-              50 Shades of Vinyl
-            </h3>
-            <div class="hero">
-              <img src="./assets/img/sbic-2.jpg" alt="" class="heroimg">
+          <div class="whitebox">
+            <div class="alt-title">
+              <h3>
+                50 Shades of Vinyl
+              </h3>
+              <p class="minor">aka</p>
+              <h3>
+                Sex? But I'm Canadian!
+              </h3>
             </div>
             <div class="hsblurb">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam fugit eaque incidunt quae, a
-                voluptate, ipsa facilis vitae excepturi animi officia praesentium molestias in laudantium voluptas porro
+                voluptate, ipsa facilis vitae excepturi animi officia praesentium molestias in laudantium voluptas
+                porro
                 qui aliquam quod accusamus, corrupti obcaecati iste ratione dicta! Nemo unde quis, quam voluptatum
                 delectus porro dolore dignissimos voluptates itaque mollitia cum velit consequatur iste quo fugit illo
-                possimus at odio aut pariatur nihil nam fugiat! Cumque suscipit dolor, molestiae neque eos facere fugiat
+                possimus at odio aut pariatur nihil nam fugiat! Cumque suscipit dolor, molestiae neque eos facere
+                fugiat
                 laudantium possimus consectetur accusantium.</p>
             </div>
           </div>
-          <div class="whitebox">
+          <div class="yellowbox">
             <h3 class="happyhead">
               In Development
             </h3>
@@ -134,7 +135,8 @@
               <ul>
                 <li>
                   <h4>A Gentle Touch of Vinyl</h4>
-                  <p>The sequel to our much-loved tribute is taking shape as we speak. As with the first show, we would
+                  <p>The sequel to our much-loved tribute is taking shape as we speak. As with the first show, we
+                    would
                     much rather get it right than rush it out, so it may be a little while before this hits the stage.
                     Stay tuned for updates</p>
                 </li>
@@ -143,23 +145,51 @@
           </div>
         </section>
         <section id="reviews">
-          <div class="yellowbox">
-            <div class="happyhl">
-              <h1>reviews</h1>
-            </div>
+          <div class="hero">
             <img src="./assets/img/sbic-3.png" alt="" class="heroimg">
-            <h3 class="happyhead">
-              Sex? But I'm Canadian!
-            </h3>
-            <div class="quotes">
-              <blockquote cite="Rob Williams, Winnipeg Free Press">The stories never feel dirty; rather, they are funny, heart-warming and sweet with a positive message. It really doesn’t get much more Canadian than this.</blockquote>
-              <blockquote cite="Matt Olson, Saskatoon Star Phoenix">Dicecco can do the voice, and gets about as close one could imagine to McLean’s speaking cadence. The writing is spot on — it’s like someone found the lost R-rated recordings of The Vinyl Café and put them onstage.</blockquote>
-              <blockquote cite="Andrew Friesen, CBC Winnipeg">Dicecco obviously reveres McLean and his legacy. And his impression is uncannily accurate. CBC Radio fans, buy your tickets now...</blockquote>
-              <blockquote cite="Victoria Lamas, Link">The show’s main strength is its carefully-crafted narrative that allows for a faultless pacing. The performance is polished and appears effortless—a sign that a lot of care has been put into the show.</blockquote>
-              <blockquote cite="Rachel Levine, Montreal Rampage">Dicecco captures the voice, intonation and rhythm of McLean perfectly.</blockquote>
-              <blockquote cite="Mark Robins, Vancouver Presents">Never feeling forced, every word and gesture had a purpose in telling the sometimes ridiculously funny, and bawdy, stories.</blockquote>
+          </div>
+          <div class="whitebox">
+            <div class="alt-title">
+              <h3>
+                50 Shades of Vinyl
+              </h3>
+              <p class="minor">aka</p>
+              <h3>
+                Sex? But I'm Canadian!
+              </h3>
+            </div>
+            <div class="quotecon">
+              <div class="quotebox">
+                <blockquote cite="Rob Williams, Winnipeg Free Press">The stories never feel dirty; rather, they are
+                  funny,
+                  heart-warming and sweet with a positive message. It really doesn’t get much more Canadian than this.
+                </blockquote>
+              </div>
+              <div class="quotebox">
+                <blockquote cite="Matt Olson, Saskatoon Star Phoenix">Dicecco can do the voice, and gets about as close
+                  one could imagine to McLean’s speaking cadence. The writing is spot on — it’s like someone found the
+                  lost R-rated recordings of The Vinyl Café and put them onstage.</blockquote>
+              </div>
+              <div class="quotebox">
+                <blockquote cite="Andrew Friesen, CBC Winnipeg">Dicecco obviously reveres McLean and his legacy. And his
+                  impression is uncannily accurate. CBC Radio fans, buy your tickets now...</blockquote>
+              </div>
+              <div class="quotebox">
+                <blockquote cite="Victoria Lamas, Link">The show’s main strength is its carefully-crafted narrative that
+                  allows for a faultless pacing. The performance is polished and appears effortless—a sign that a lot of
+                  care has been put into the show.</blockquote>
+              </div>
+              <div class="quotebox">
+                <blockquote cite="Rachel Levine, Montreal Rampage">Dicecco captures the voice, intonation and rhythm of
+                  McLean perfectly.</blockquote>
+              </div>
+              <div class="quotebox">
+                <blockquote cite="Mark Robins, Vancouver Presents">Never feeling forced, every word and gesture had a
+                  purpose in telling the sometimes ridiculously funny, and bawdy, stories.</blockquote>
+              </div>
             </div>
           </div>
+        </section>
     </main>
     <section id="footer">
       <div class="wrapper">
