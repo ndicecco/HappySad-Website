@@ -1,33 +1,9 @@
-.talkbox
-    display: block
-    z-index: 2
-    margin: 0 10px 0 10px
-    min-height: 90vh
-    max-width: 45vw
-    float: left
-    position: relative
-    left: 86px
-    @media screen and (max-width: 1028px)
-        left: 0px
-    @media screen and (max-width: 690px)
-        display: inline
-        float: none
-        margin: 0 auto
-        text-align: center
-        max-width: 100vw
-        min-height: 0px
-        left: 0px
-
-        
-
 .papercon
-    display: block
-    position: relative
     width: 100%
-    max-width: 45vw
+    max-width: 100vw
     min-width: 153px
-    float: left
-    left: 86px
+    display: flex
+    justify-content: center
     @media screen and (max-width: 1028px)
         left: 0px
     @media screen and (max-width: 690px)
@@ -41,14 +17,18 @@
         float: none
         left: 0px
 
+.papertitle
+    margin: 0 auto
+    h3
+        text-align: center   
+
 .gridcon
     display: grid
-    max-width: 600px
-    margin: 10px auto
+    max-width: 100vw
+    margin: 0 auto
     padding: 0
-    grid-template-columns: repeat(auto-fill, minmax(153px, 1fr))
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
     grid-column-gap: 5px
-    grid-row-gap: 5px
 
 .paper
     align-self: center
@@ -110,5 +90,20 @@
 .blur
     @include blur
 
+.showcon
+    display: grid
+    max-width: 100vw
+    margin: 0 auto
+    padding: 0
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr
+    grid-column-gap: 0px
+    grid-row-gap: 0px
 
-    
+.show
+    height: 1fr
+    width: 1fr
+    img
+        height: auto
+        width: 100%
+        display: block
