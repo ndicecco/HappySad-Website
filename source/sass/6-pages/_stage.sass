@@ -90,20 +90,74 @@
 .blur
     @include blur
 
+.showwrap
+    margin: 0 auto
+    max-width: 1100px
+
 .showcon
     display: grid
-    max-width: 100vw
-    margin: 0 auto
-    padding: 0
     grid-template-columns: 1fr 1fr 1fr
     grid-template-rows: 1fr 1fr 1fr
     grid-column-gap: 0px
     grid-row-gap: 0px
+    position: relative
 
 .show
-    height: 1fr
-    width: 1fr
+    position: relative
+    background: none
+    overflow: hidden
     img
         height: auto
         width: 100%
         display: block
+        transition: filter 0.2s ease-in-out
+        transition: transform 0.2s ease-in-out
+    &:hover,
+    &:active,
+    &:focus
+        .showtitle
+            opacity: 1
+            color: $offwt
+        .subtitle
+            opacity: 1
+            color: $offwt
+        img
+            filter: blur(2px)
+            transform: scale(1.01)
+
+.showtitle
+    /*general*/
+    z-index: 1
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    background: $shadow
+    /*typographic styles*/
+    color: $offwt
+    font-size: 1.5em
+    font-weight: bold
+    text-decoration: none
+    /*position text in center of div */
+    display: flex
+    align-items: center
+    justify-content: center
+    /* hide the title by default */
+    opacity: 0
+    transition: opacity .5s
+    /* for touch screen devices */
+    @media (hover: none)  
+        .showtitle 
+            opacity: 1
+        .subtitle 
+            opacity: 1
+        .nav-image img
+            filter: blur(2px)
+
+.subtitle
+    /*general*/
+    top: 1.5em
+    /*typographic styles*/
+    font-size: 0.9em
+    font-weight: lighter
