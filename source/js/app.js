@@ -2,9 +2,15 @@ import Swup from 'swup';
 const swup = new Swup();
 
 function init() {
-  if(document.querySelector('.papercon')){
+  if (document.querySelector('.papercon')) {
     //initialize baguetteBox
     baguetteBox.run('.papercon');
+
+    //magnific pop-up
+    $('.open-popup-link').magnificPopup({
+      type:'inline',
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+    });
   }
   if (document.querySelector('#content')) {
     //sidebar slide menu

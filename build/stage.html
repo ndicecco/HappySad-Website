@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.min.css" />
   <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
   <script src="./assets/js/musicbox.js"></script>
 </head>
 
@@ -85,12 +86,18 @@
       <div class="showwrap">
         <div class="showcon">
           <div class="show">
-            <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr. (2019)" class="showimg">
-            <div class="overlay">
-              <div class="showtitle">
-                <h3>Peter Pan Jr. (2019)</h3>
-                <h4>Stage Manager</h4>
+            <a href="#test-popup" class="open-popup-link">
+              <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr. (2019)" class="showimg">
+              <div class="overlay">
+                <div class="showtitle">
+                  <h3>Peter Pan Jr. (2019)</h3>
+                  <h4>Stage Manager</h4>
+                </div>
               </div>
+            </a>
+            <!-- Popup itself -->
+            <div id="test-popup" class="white-popup mfp-hide">
+              Popup content
             </div>
           </div>
           <div class="show">
@@ -266,6 +273,8 @@
   <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="./assets/js/jquery.magnific-popup.min.js"></script>
   <script src="./assets/js/app.min.js"></script>
 </body>
 
