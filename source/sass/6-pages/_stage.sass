@@ -88,7 +88,7 @@
     width: 80%
     opacity: 1
 
-.white-popup
+.lightbox-basic
     position: relative
     max-width: 71.875rem
     margin: 2.5rem auto
@@ -96,3 +96,45 @@
     background-color: $offwt
     text-align: left
     border-radius: 14px
+
+.lightbox-grid
+    display: grid
+    width: 100%
+    grid-template-areas: "photo photo head head" "photo photo main main" "photo photo main main" "photo photo foot foot"
+
+.lightbox-head
+    grid-area: head
+    text-align: start
+    margin-bottom: 30px
+    h2
+        color: $dark
+        font-size: 39px
+        small
+            font-size: 27px
+    p
+        text-transform: none
+        font-size: 16px
+        font-weight: lighter
+
+.lightbox-photo
+    grid-area: photo
+    margin: 0 50px
+    img
+        max-width: 400px
+        height: auto
+
+.lightbox-main
+    grid-area: main
+
+.team
+
+.credits
+
+.snippet
+    grid-area: foot
+    max-width: 90%
+
+.blurb
+    color: $dark
+    margin-top: 15px
+
