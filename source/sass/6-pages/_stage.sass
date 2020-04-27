@@ -119,10 +119,23 @@
 .lightbox-photo
     grid-area: photo
     margin: 0 50px
+    position: relative
     img
         max-width: 400px
         height: auto
+        display: block
 
+.lightbox-photo .overlay
+    opacity: 1
+    display: block
+    bottom: 5px
+    height: 99%
+    background: rgba(0,0,0,0.3)
+
+.lightbox-photo .buttons
+    position: absolute
+    bottom: -40px
+    
 .lightbox-main
     grid-area: main
 
