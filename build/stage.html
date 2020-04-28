@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="assets/css/main.min.css" />
   <link rel="stylesheet" href="assets/css/baguetteBox.min.css">
-  <link rel="stylesheet" href="assets/css/magnific-popup.css">
-  <script src="./assets/js/musicbox.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.1/magnific-popup.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -57,8 +56,33 @@
     <!--end of Header -->
     <!--Main Content -->
     <main class="transition-fade transition-move transition-scale">
+      <!--Portfolio navigation -->
+      <div id="portfolio-selector">
+        <div class="wrapper">
+          <div class="portfolio-nav">
+            <ul class="portfolio-menu">
+              <li class="port-btn active">
+                <a href="#" class="portfolio-menu-item" id="all">All Shows</a>
+              </li>
+              <li class="port-btn">
+                <a href="#" class="portfolio-menu-item" id="sm">Stage Management</a>
+              </li>
+              <li class="port-btn">
+                <a href="#" class="portfolio-menu-item" id="pm">Production Management</a>
+              </li>
+              <li class="port-btn">
+                <a href="#" class="portfolio-menu-item" id="sd">Sound Design</a>
+              </li>
+              <li class="port-btn">
+                <a href="#" class="portfolio-menu-item" id="pw">Paperwork Samples</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--end of Portfolio navigation -->
       <!--Paperwork Gallery -->
-      <div class="wrapper">
+      <div id="paperwork-gallery">
         <div class="papertitle">
           <h3>Paperwork Samples</h3>
         </div>
@@ -86,1097 +110,1229 @@
         </div>
       </div>
       <!--end of Paperwork Gallery -->
-      <!--Details Lightboxes -->
-      <div id="Mascall-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Digital Residency</h2>
-            <p class="credits">Mascall Dance</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/mascall1.jpg" alt="Mascall Dance">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jennifer
-                Mascall</p>
-              <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jennifer Mascall, Jacq
-                Smith, & Jamie Robinson</p>
-              <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-              <p class="credits"><strong>Videography by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Moves Media</p>
-              <p class="credits"><strong>Dancers</strong>
-                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Eowynn Enquist, Avery Smith, Kaia Shukin,
-                Rachel Murray, Marcy Mills, & Daria Mikhaylyuk</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Matriarchs-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Matriarchs Uprising</h2>
-            <p class="credits">at The Talking Stick Festival</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/matriarchs2.jpg" alt="Kiri">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
-              </p>
-              <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
-              <p class="credits"><strong>Video Support by</strong>&emsp;&emsp;&emsp;&emsp;&ensp;Chimerik</p></br>
-              <p class="credits"><strong>Featuring</strong></p>
-              <p class="credits">&emsp;&emsp;<strong>Kiri</strong> by Louise Potiki Bryant</p>
-              <p class="credits">&emsp;&emsp;<strong>Link</strong> by Aria Evans</p>
-              <p class="credits">&emsp;&emsp;<strong>Same but Different</strong> by Henrietta Baird & Mariaa Randall</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Spine-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Spine<small>(2020)</small></h2>
-            <p class="credits">by Clara Brennan</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <!-- music box grid-->
-            <img src="./assets/img/spine1.jpg" alt="Spine">
-            <div class="overlay">
-              <div class="showtitle">
-                <h4>Sound Design Samples</h4>
-                <div class="buttons">
-                  <button class="play" id="s0" onclick="playOrPauseSong(0)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill0"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of music box grid-->
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Backbone Theatre
-                Collective
-              </p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Wendy
-                Bollard</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Catherine McLaren</p>
-              <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Zoe Bellis</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
-              </p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Assistant Direction by</strong> &emsp;&ensp;Sandra Medeiros</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kate
-                Besworth</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="PPjr-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Peter Pan Jr.</h2>
-            <p class="credits">by Carolyn Leigh & Morris Charlap</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr.">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Children's
-                Theatre of Richmond Association</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Emily
-                Matchette</p>
-              <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jesse Alvarez</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Gerald King</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Brian Ball</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;James Menear</p>
-              <p class="credits"><strong>Technical Direction by</strong> &emsp;Robin Richardson</p>
-              <p class="credits"><strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Catherine McLaren</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;37 young
-                actors between ages 7 and 17</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Dance-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Dancing Lessons</h2>
-            <p class="credits">by Mark St. Germain</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/dancing1a.jpg" alt="Dancing Lessons">
-            <!-- sound sample overlay-->
-            <div class="overlay">
-              <div class="showtitle">
-                <h4>Sound Design Samples</h4>
-                <div class="buttons">
-                  <button class="play" id="s6" onclick="playOrPauseSong(6)"><img src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(6)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill6"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of sound sample overlay-->
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
-                Productions</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Sarah
-                Rodgers</p>
-              <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Melissa Sciaretta</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Taylor Janzen</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
-              </p>
-              <p class="credits"><strong>Sound & Projection by</strong>&emsp;&ensp;Nico Dicecco</p>
-              <p class="credits"><strong>Videography by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;Trevor Meyer</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandra
-                Medeiros & Andrew Coghlan</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Mibc-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Creative Residency<small>(2019)</small></h2>
-            <p class="credits">Made in BC Dance on Tour</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/mibc1.jpg" alt="Eric Cheung">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jane Gabriels
-              </p>
-              <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Alexa Mardon</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kristy
-                Janvier, Eric Cheung, Zahra Shahab and nine other short pieces</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Diss-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Dissection of a Mixed Heritage Woman<small>(2019)</small></h2>
-            <p class="credits">by Nyla Carpentier</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/diss2.png" alt="Dissection of a Mixed Heritage Woman">
-            <!-- sound sample overlay-->
-            <div class="overlay">
-              <div class="showtitle">
-                <h4>Sound Design Samples</h4>
-                <div class="buttons">
-                  <button class="play" id="s11" onclick="playOrPauseSong(11)"><img
-                      src="./assets/img/play.png" /></button>
-                  <button class="restart" onclick="resetSong(11)"><img src="./assets/img/Restart.png" /></button>
-                  <div id="seek-bar">
-                    <div id="fill11"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end of sound sample overlay-->
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Phay
-                Moores</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Nicole Weismiller</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nyla
-                Carpentier</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Rock-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Rock of Ages</h2>
-            <p class="credits">by Chris D'Arienzo & Ethan Popp</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/rock2.png" alt="Rock of Ages">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Renegade Arts
-                Co.</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Chris
-                Adams</p>
-              <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Nicol Spinola</p>
-              <p class="credits"><strong>Musical Direction by</strong> &emsp;&emsp;&ensp;Kerry O'Donovan</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting & Sound by</strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;Stephen Bulat</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;Brian Ball</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Donnie Tejani</p>
-              <p class="credits"><strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Taylor MacKinnon</p>
-              <p class="credits"><strong>Dresser</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Claire Turner</p>
-              <p class="credits"><strong>Featuring</strong></p>
-              <p class="credits">&emsp;&emsp;Victor Hunter, Synthia Yusuf, Scott Walters, Madeleine Suddaby, Charlie
-                Deagnon,
-              </p>
-              <p class="credits">&emsp;&emsp;Chad Matchette, Jesse Alvarez, Joseph Spitale, Sean Anthony, Dane Smit,
-                Megan Greenwood,</p>
-              <p class="credits">&emsp;&emsp;Joscelyne Tamburri, Kate Yahn, Tessa Trach, Tamara Vishniakoff, Lucia
-                Forward, Brynne Harper,</p>
-              <p class="credits">&emsp;&emsp;Emily Matchette, & Matt Briard</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Sea-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>The Sea</h2>
-            <p class="credits">by Edward Bond</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/sea2.jpg" alt="The Sea">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Slamming Door
-                Collective</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara
-                McCarthy</p>
-              <p class="credits"><strong>Rhsl. Stage Mgmt by</strong> &emsp;&emsp;&emsp;&nbsp;Victoria Snashall</p>
-              <p class="credits"><strong>Prod. Stage Mgmt by</strong> &emsp;&emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Celeste English</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandy Peters
-              </p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Matthew MacDonald-Bain
-              </p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Chantal Short &
-                Cheyenne Mabberley</p>
-              <p class="credits"><strong>Featuring</strong></p>
-              <p class="credits">&emsp;&emsp;Genevieve Fleming, Dylan Floyde, Stephen Aberle, Elizabeth Kirkland,
-                Michelle Morris,</p>
-              <p class="credits">&emsp;&emsp;Raes Calvert, Mason Temple, Cheyenne Mabberley, Melissa Oei, & Jessica Hood</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Best-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>The Best Christmas Pageant Ever</h2>
-            <p class="credits">by Barbara Robinson</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/bestmas3.png" alt="Best Christmas Pageant">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess Productions</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara McCarthy
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Dan Wiebe</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Ella Heatley-Mulhall</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;14 young
-                actors between ages 7 and 15</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Med-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Med'Cine</h2>
-            <p class="credits">New Works & O. Dela Arts</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/rematriate.png" alt="Rematriate">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;New Works & O. Dela Arts
-              </p>
-              <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
-              <p class="credits"><strong></strong></p></br>
-              <p class="credits">&emsp;&emsp;<strong>Rematriate</strong> with Olivia C. Davies</p>
-              <p class="credits">&emsp;&emsp;<strong>Gateways</strong> with Kelley McInnes, Louise Potiki Bryant, Rianne Smit, and Olivia C. Davies</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Crow-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Crow's Nest and Other Places She's Gone</h2>
-            <p class="credits">O. Dela Arts</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/crow3.jpg" alt="Crow's Nest">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
-              </p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
-              <p class="credits"><strong>Rigging by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Jacob Frumlater</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Olivia C. Davies, Rosemary Georgeson, & Emily Long</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Prec-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Precious Little</h2>
-            <p class="credits">by Madeleine George</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/PrecLittle1.png" alt="Precious Little">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;starstar theatre
-              </p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Mika Laulainen</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Scenography by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;  Jared Rashke</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;  Zoe Wessler</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Michelle Bowes</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  Sara Andrina Brown, Therese Champagne, and Elizabeth Holliday</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Prob-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Probability</h2>
-            <p class="credits">by Tricia Trinh</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/prob1.png" alt="Probability">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Dusty Foot Productions
-              </p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tricia Trinh</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp; Nico Dicecco</p>
-              <p class="credits"><strong>Lights & Projections by</strong>&emsp;&ensp;Cameron Fraser</p>
-              <p class="credits"><strong>Animation by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rene Linares</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Dylan McNulty</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Chantal Short</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Marissa Burton, Rami Kahlon, Rachel Renaud, & Alexandra Voicu</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="View-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>A Beautiful View</h2>
-            <p class="credits">by Daniel McIvor</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/view1.png" alt="A Beautiful View">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess Productions</p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara McCarthy
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Sandy Peters</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Ella Heatley-Mulhall</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandra Medeiros * Melissa Oei</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Little-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Little Women</h2>
-            <p class="credits">by Allan Knee</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/littlewmn1.jpg" alt="Little Women">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Bring On Tomorrow Co.
-              </p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Lalainia Lindbjerg Strelau</p>
-              <p class="credits"><strong>Musical Direction by</strong> &emsp;&emsp;&ensp;Monique Creber</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Melanie Thompson</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Graham Ockley</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Todd Ablett</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Alex Livland</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&ensp;Christina Sinosich</p>
-              <p class="credits"><strong>Featuring</strong></p>
-              <p class="credits">&emsp;&emsp;Michelle Creber, Ranae Miller, Jennifer Gillis, Julia MacLean, Monique Creber,
-              </p>
-              <p class="credits">&emsp;&emsp;William Tippery, Chris Adams, Stephen Aberle, Colleen Winton, & Erik Gow</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Rid-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>The Ridiculous Darkness</h2>
-            <p class="credits">by Wolfram Lotz</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/riddark2.png" alt="The Ridiculous Darkness">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Alley Theatre
-              </p>
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Marisa Emma Smith & Nyla Carpentier</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Liam Kearns</p>
-              <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;John Webber</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Shizuka Kai</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Nita Bowerman</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;James Coomber</p>
-              <p class="credits"><strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Diana Bartosh</p>
-              <p class="credits"><strong>Featuring</strong></p>
-              <p class="credits">&emsp;&emsp;CLINT ANDREW, MIRANDA EDWARDS, EMILIE LECLERC, MUNISH SHARMA, AMANDA SUM, DANIEL ARNOLD,
-              </p>
-              <p class="credits">&emsp;&emsp;and 40+ members of various community groups from the greater Vancouver area</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Eotr-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>End of the Rainbow</h2>
-            <p class="credits">by Peter Quilter</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/EoTR7.png" alt="End of the Rainbow">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Claude Giroux</p>
-              <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp; Nico Dicecco</p>
-              <p class="credits"><strong>Lights & Sound by</strong>&emsp;&emsp;&emsp;&emsp;&ensp;Stephen Bulat</p>
-              <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; Claude Giroux</p>
-              <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Tiffany Bishop</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Janet Gigliotti, Jeff Hoffman, Gord Roberts, Matthew Simmons, and Robin Clegg</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Gps-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Generation Post Script</h2>
-            <p class="credits">by Mily mumford</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/GPS2.png" alt="Generation Post Script">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Nebula Company Theatre
-                </p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Mily Mumford</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Samantha Pawliuk</p>
-                <p class="credits"><strong>Projection Design by</strong>&emsp;&emsp;&ensp;Cameron Fraser</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Kougar Basi</p>
-                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Bailey Creed</p>
-                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; CJ McGillivray</p>
-                <p class="credits"><strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Featuring</strong></p>
-                <p class="credits">&emsp;&emsp;Ming Hudson, Xander Williams, Bailey Creed, Levi Schneider, & Doug Ennenberg
-                </p>
-              </div>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Beav-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Beaver Dreams “La Fièvre du Castor”</h2>
-            <p class="credits">by Maggie Winston</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/beaverdreams.png" alt="">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Lost & Found Puppet Co.
-              <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Anne Lalancette</p>
-              <p class="credits"><strong>Animation Design by</strong>&emsp;&emsp;&emsp; Molly Winston</p>
-              <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Kendal Zier</p>
-              <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Maggie Winston & Mika Laulainen</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <div id="Wild-details-lightbox" class="lightbox-basic mfp-hide">
-        <!--lightbox grid container -->
-        <div class="lightbox-grid">
-          <div class="lightbox-head">
-            <h2>Wild/Society</h2>
-            <p class="credits">by Mika Laulainen</p>
-          </div>
-          <!-- end of lightbox-head -->
-          <div class="lightbox-photo">
-            <img src="./assets/img/wildsoc1.png" alt="Wild/Society">
-          </div>
-          <!-- end of lightbox-photo -->
-          <div class="lightbox-main">
-            <div class="team">
-              <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;starstar theatre
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Brian Cochrane & Jamie King</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Mika Laulainen & Melissa Oei</p>
-            </div>
-            <!-- end of team -->
-            <div class="snippet">
-              <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus dolore,
-                quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae architecto
-                ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium, voluptates
-                quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
-            </div>
-            <!-- end of snippet -->
-          </div>
-          <!-- end of lightbox-main -->
-        </div>
-        <!-- end of lightbox grid container -->
-      </div>
-      <!--end of Details Lightboxes -->
       <!--Past Productions Title-->
-      <div class="papertitle">
-        <h3>Past Productions</h3>
-      </div>
-      <!--end of Past Productions Title-->
-      <!--Past Productions Grid-->
-      <div class="showwrap">
-        <div class="showcon">
-          <div class="show">
-            <a href="#Mascall-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/mascall2.jpg" alt="Mascall Dance Research Residency (2020)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Mascall Dance Research Residency (2020)</h3>
-                  <h4>Production Manager</h4>
+      <div id="past-productions">
+        <div id="past-productions-title" class="papertitle">
+          <h3>Past Productions</h3>
+        </div>
+        <!--end of Past Productions Title-->
+        <!--Past Productions Grid-->
+        <div class="showwrap">
+          <div class="showcon">
+            <div class="show pm">
+              <a href="#Mascall-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/mascall2.jpg" alt="Mascall Dance Research Residency (2020)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Mascall Dance Research Residency (2020)</h3>
+                    <h4>Production Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Matriarchs-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/matriarchs1.jpg" alt="Matriarchs Uprising (2020)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Matriarchs Uprising (2020)</h3>
-                  <h4>Production Manager</h4>
+              </a>
+            </div>
+            <div class="show pm">
+              <a href="#Matriarchs-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/matriarchs1.jpg" alt="Matriarchs Uprising (2020)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Matriarchs Uprising (2020)</h3>
+                    <h4>Production Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Spine-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/spine1.png" alt="Spine (2020)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Spine (2019)</h3>
-                  <h4>Sound Designer</h4>
+              </a>
+            </div>
+            <div class="show sd">
+              <a href="#Spine-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/spine1.png" alt="Spine (2020)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Spine (2019)</h3>
+                    <h4>Sound Designer</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#PPjr-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr. (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Peter Pan Jr. (2019)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#PPjr-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr. (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Peter Pan Jr. (2019)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Dance-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/dancing6.png" alt="Dancing Lessons (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Dancing Lessons (2019)</h3>
-                  <h4>Stage Manager</h4>
-                  <h5>Projection Designer</h5>
-                  <h5>Sound Designer</h5>
+              </a>
+            </div>
+            <div class="show sm sd">
+              <a href="#Dance-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/dancing6.png" alt="Dancing Lessons (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Dancing Lessons (2019)</h3>
+                    <h4>Stage Manager</h4>
+                    <h5>Projection Designer</h5>
+                    <h5>Sound Designer</h5>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Mibc-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/mibc4.jpg" alt="Made in BC Creative Residency (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Made in BC Creative Residency (2019)</h3>
-                  <h4>Production Manager</h4>
+              </a>
+            </div>
+            <div class="show pm">
+              <a href="#Mibc-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/mibc4.jpg" alt="Made in BC Creative Residency (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Made in BC Creative Residency (2019)</h3>
+                    <h4>Production Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Diss-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/diss2.png" alt="Dissection of a Mixed Heritage Woman (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Dissection of a Mixed Heritage Woman (2019)</h3>
-                  <h4>Stage Manager</h4>
-                  <h5>Sound Designer</h5>
+              </a>
+            </div>
+            <div class="show sm sd">
+              <a href="#Diss-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/diss2.png" alt="Dissection of a Mixed Heritage Woman (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Dissection of a Mixed Heritage Woman (2019)</h3>
+                    <h4>Stage Manager</h4>
+                    <h5>Sound Designer</h5>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Rock-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/rock1.png" alt="Rock of Ages (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Rock of Ages (2019)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Rock-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/rock1.png" alt="Rock of Ages (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Rock of Ages (2019)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Sea-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/sea1.png" alt="The Sea (2019)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>The Sea (2019)</h3>
-                  <h4>Production Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Sea-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/sea1.png" alt="The Sea (2019)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>The Sea (2019)</h3>
+                    <h4>Production Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Best-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/bestmas2.png" alt="The Best Christmas Pageant Ever (2018)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>The Best Christmas Pageant Ever (2018)</h3>
-                  <h4>Stage Manager</h4>
-                  <h5>Sound Designer</h5>
+              </a>
+            </div>
+            <div class="show sm sd">
+              <a href="#Best-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/bestmas2.png" alt="The Best Christmas Pageant Ever (2018)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>The Best Christmas Pageant Ever (2018)</h3>
+                    <h4>Stage Manager</h4>
+                    <h5>Sound Designer</h5>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Med-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/medcine2.png" alt="Med'Cine (2018)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Med'Cine (2018)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Med-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/medcine2.png" alt="Med'Cine (2018)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Med'Cine (2018)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Crow-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/crowsnest.png" alt="Crow's Nest and Other Places She's Gone (2018)"
-                class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Crow's Nest and Other Places She's Gone (2018)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Crow-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/crowsnest.png" alt="Crow's Nest and Other Places She's Gone (2018)"
+                  class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Crow's Nest and Other Places She's Gone (2018)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Prec-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/PrecLittle2.png" alt="Precious Little (2018)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Precious Little (2018)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Prec-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/PrecLittle2.png" alt="Precious Little (2018)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Precious Little (2018)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Prob-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/prob2.png" alt="Probability (2018)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Probability (2018)</h3>
-                  <h4>Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Prob-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/prob2.png" alt="Probability (2018)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Probability (2018)</h3>
+                    <h4>Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#View-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/view6.png" alt="A Beautiful View (2018)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>A Beautiful View (2018)</h3>
-                  <h4>Stage Manager</h4>
-                  <h5>Sound Designer</h5>
+              </a>
+            </div>
+            <div class="show sm sd">
+              <a href="#View-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/view6.png" alt="A Beautiful View (2018)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>A Beautiful View (2018)</h3>
+                    <h4>Stage Manager</h4>
+                    <h5>Sound Designer</h5>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Little-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/littlewmn2.jpg" alt="Little Women (2017)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Little Women (2017)</h3>
-                  <h4>Production Manager</h4>
+              </a>
+            </div>
+            <div class="show pm">
+              <a href="#Little-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/littlewmn2.jpg" alt="Little Women (2017)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Little Women (2017)</h3>
+                    <h4>Production Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Rid-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/riddark1.png" alt="The Ridiculous Darkness (2017)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>The Ridiculous Darkness (2017)</h3>
-                  <h4>Running Crew</h4>
+              </a>
+            </div>
+            <div class="show other">
+              <a href="#Rid-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/riddark1.png" alt="The Ridiculous Darkness (2017)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>The Ridiculous Darkness (2017)</h3>
+                    <h4>Running Crew</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Eotr-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/EoTR4.png" alt="End of the Rainbow (2017)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>End of the Rainbow (2017)</h3>
-                  <h4>Touring Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Eotr-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/EoTR4.png" alt="End of the Rainbow (2017)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>End of the Rainbow (2017)</h3>
+                    <h4>Touring Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Gps-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/GPS1.png" alt="Generation Post Script (2017)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Generation Post Script (2017)</h3>
-                  <h4>Assistant Stage Manager</h4>
+              </a>
+            </div>
+            <div class="show sm">
+              <a href="#Gps-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/GPS1.png" alt="Generation Post Script (2017)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Generation Post Script (2017)</h3>
+                    <h4>Assistant Stage Manager</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Beav-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/beaverdreams.png" alt="Beaver Dreams (2017)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Beaver Dreams (2017)</h3>
-                  <h4>Production Assistant</h4>
+              </a>
+            </div>
+            <div class="show other">
+              <a href="#Beav-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/beaverdreams.png" alt="Beaver Dreams (2017)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Beaver Dreams (2017)</h3>
+                    <h4>Production Assistant</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </div>
-          <div class="show">
-            <a href="#Wild-details-lightbox" class="open-popup-link">
-              <img src="./assets/img/wildsoc1.png" alt="Wild Society (2016)" class="showimg">
-              <div class="overlay">
-                <div class="showtitle">
-                  <h3>Wild/Society (2016)</h3>
-                  <h4>Production Assistant</h4>
+              </a>
+            </div>
+            <div class="show other">
+              <a href="#Wild-details-lightbox" class="open-popup-link">
+                <img src="./assets/img/wildsoc1.png" alt="Wild Society (2016)" class="showimg">
+                <div class="overlay">
+                  <div class="showtitle">
+                    <h3>Wild/Society (2016)</h3>
+                    <h4>Production Assistant</h4>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </div>
       <!--end of Past Productions Grid-->
+      <!--Details Lightboxes -->
+      <div id="details-lightboxes">
+        <div id="Mascall-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Digital Residency</h2>
+              <p class="credits">Mascall Dance</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/mascall1.jpg" alt="Mascall Dance">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jennifer
+                  Mascall</p>
+                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jennifer Mascall, Jacq
+                  Smith, & Jamie Robinson</p>
+                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
+                <p class="credits"><strong>Videography by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Moves Media</p>
+                <p class="credits"><strong>Dancers</strong>
+                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Eowynn Enquist, Avery Smith, Kaia Shukin,
+                  Rachel Murray, Marcy Mills, & Daria Mikhaylyuk</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Matriarchs-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Matriarchs Uprising</h2>
+              <p class="credits">at The Talking Stick Festival</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/matriarchs2.jpg" alt="Kiri">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
+                </p>
+                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
+                <p class="credits"><strong>Video Support by</strong>&emsp;&emsp;&emsp;&emsp;&ensp;Chimerik</p></br>
+                <p class="credits"><strong>Featuring</strong></p>
+                <p class="credits">&emsp;&emsp;<strong>Kiri</strong> by Louise Potiki Bryant</p>
+                <p class="credits">&emsp;&emsp;<strong>Link</strong> by Aria Evans</p>
+                <p class="credits">&emsp;&emsp;<strong>Same but Different</strong> by Henrietta Baird & Mariaa Randall
+                </p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Spine-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Spine<small>(2020)</small></h2>
+              <p class="credits">by Clara Brennan</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <!-- music box grid-->
+              <img src="./assets/img/spine1.jpg" alt="Spine">
+              <div class="overlay">
+                <div class="showtitle">
+                  <h4>Sound Design Samples</h4>
+                  <div class="buttons">
+                    <button class="play" id="s0" onclick="playOrPauseSong(0)"><img
+                        src="./assets/img/play.png" /></button>
+                    <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
+                    <div id="seek-bar">
+                      <div id="fill0"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of music box grid-->
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Backbone
+                  Theatre
+                  Collective
+                </p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Wendy
+                  Bollard</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Catherine McLaren</p>
+                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Zoe Bellis</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
+                </p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Assistant Direction by</strong> &emsp;&ensp;Sandra Medeiros</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kate
+                  Besworth</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="PPjr-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Peter Pan Jr.</h2>
+              <p class="credits">by Carolyn Leigh & Morris Charlap</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/ppjr5.png" alt="Peter Pan Jr.">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Children's
+                  Theatre of Richmond Association</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Emily
+                  Matchette</p>
+                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jesse Alvarez</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Gerald King</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Brian Ball
+                </p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;James Menear</p>
+                <p class="credits"><strong>Technical Direction by</strong> &emsp;Robin Richardson</p>
+                <p class="credits">
+                  <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Catherine
+                  McLaren</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;37 young
+                  actors between ages 7 and 17</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Dance-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Dancing Lessons</h2>
+              <p class="credits">by Mark St. Germain</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/dancing1a.jpg" alt="Dancing Lessons">
+              <!-- sound sample overlay-->
+              <div class="overlay">
+                <div class="showtitle">
+                  <h4>Sound Design Samples</h4>
+                  <div class="buttons">
+                    <button class="play" id="s6" onclick="playOrPauseSong(6)"><img
+                        src="./assets/img/play.png" /></button>
+                    <button class="restart" onclick="resetSong(6)"><img src="./assets/img/Restart.png" /></button>
+                    <div id="seek-bar">
+                      <div id="fill6"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of sound sample overlay-->
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
+                  Productions</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Sarah
+                  Rodgers</p>
+                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Melissa Sciaretta</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Taylor Janzen</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
+                </p>
+                <p class="credits"><strong>Sound & Projection by</strong>&emsp;&ensp;Nico Dicecco</p>
+                <p class="credits"><strong>Videography by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;Trevor Meyer</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandra
+                  Medeiros & Andrew Coghlan</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Mibc-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Creative Residency<small>(2019)</small></h2>
+              <p class="credits">Made in BC Dance on Tour</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/mibc1.jpg" alt="Eric Cheung">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jane Gabriels
+                </p>
+                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Alexa Mardon</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kristy
+                  Janvier, Eric Cheung, Zahra Shahab and nine other short pieces</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Diss-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Dissection of a Mixed Heritage Woman<small>(2019)</small></h2>
+              <p class="credits">by Nyla Carpentier</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/diss2.png" alt="Dissection of a Mixed Heritage Woman">
+              <!-- sound sample overlay-->
+              <div class="overlay">
+                <div class="showtitle">
+                  <h4>Sound Design Samples</h4>
+                  <div class="buttons">
+                    <button class="play" id="s11" onclick="playOrPauseSong(11)"><img
+                        src="./assets/img/play.png" /></button>
+                    <button class="restart" onclick="resetSong(11)"><img src="./assets/img/Restart.png" /></button>
+                    <div id="seek-bar">
+                      <div id="fill11"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end of sound sample overlay-->
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Phay
+                  Moores</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Nicole Weismiller</p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nyla
+                  Carpentier</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Rock-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Rock of Ages</h2>
+              <p class="credits">by Chris D'Arienzo & Ethan Popp</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/rock2.png" alt="Rock of Ages">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Renegade Arts
+                  Co.</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Chris
+                  Adams</p>
+                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Nicol Spinola</p>
+                <p class="credits"><strong>Musical Direction by</strong> &emsp;&emsp;&ensp;Kerry O'Donovan</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting & Sound by</strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;Stephen Bulat</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;Brian
+                  Ball</p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Donnie Tejani</p>
+                <p class="credits">
+                  <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Taylor
+                  MacKinnon</p>
+                <p class="credits">
+                  <strong>Dresser</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Claire Turner</p>
+                <p class="credits"><strong>Featuring</strong></p>
+                <p class="credits">&emsp;&emsp;Victor Hunter, Synthia Yusuf, Scott Walters, Madeleine Suddaby, Charlie
+                  Deagnon,
+                </p>
+                <p class="credits">&emsp;&emsp;Chad Matchette, Jesse Alvarez, Joseph Spitale, Sean Anthony, Dane Smit,
+                  Megan Greenwood,</p>
+                <p class="credits">&emsp;&emsp;Joscelyne Tamburri, Kate Yahn, Tessa Trach, Tamara Vishniakoff, Lucia
+                  Forward, Brynne Harper,</p>
+                <p class="credits">&emsp;&emsp;Emily Matchette, & Matt Briard</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Sea-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>The Sea</h2>
+              <p class="credits">by Edward Bond</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/sea2.jpg" alt="The Sea">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Slamming Door
+                  Collective</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara
+                  McCarthy</p>
+                <p class="credits"><strong>Rhsl. Stage Mgmt by</strong> &emsp;&emsp;&emsp;&nbsp;Victoria Snashall</p>
+                <p class="credits"><strong>Prod. Stage Mgmt by</strong> &emsp;&emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Celeste English</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandy Peters
+                </p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Matthew
+                  MacDonald-Bain
+                </p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Chantal Short &
+                  Cheyenne Mabberley</p>
+                <p class="credits"><strong>Featuring</strong></p>
+                <p class="credits">&emsp;&emsp;Genevieve Fleming, Dylan Floyde, Stephen Aberle, Elizabeth Kirkland,
+                  Michelle Morris,</p>
+                <p class="credits">&emsp;&emsp;Raes Calvert, Mason Temple, Cheyenne Mabberley, Melissa Oei, & Jessica
+                  Hood
+                </p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Best-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>The Best Christmas Pageant Ever</h2>
+              <p class="credits">by Barbara Robinson</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/bestmas3.png" alt="Best Christmas Pageant">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
+                  Productions</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara
+                  McCarthy
+                  <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                  <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
+                  <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Dan Wiebe
+                  </p>
+                  <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
+                  <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Ella
+                    Heatley-Mulhall
+                  </p>
+                  <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;14 young
+                    actors between ages 7 and 15</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Med-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Med'Cine</h2>
+              <p class="credits">New Works & O. Dela Arts</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/rematriate.png" alt="Rematriate">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;New Works & O.
+                  Dela Arts
+                </p>
+                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
+                <p class="credits"><strong></strong></p></br>
+                <p class="credits">&emsp;&emsp;<strong>Rematriate</strong> with Olivia C. Davies</p>
+                <p class="credits">&emsp;&emsp;<strong>Gateways</strong> with Kelley McInnes, Louise Potiki Bryant,
+                  Rianne
+                  Smit, and Olivia C. Davies</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Crow-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Crow's Nest and Other Places She's Gone</h2>
+              <p class="credits">O. Dela Arts</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/crow3.jpg" alt="Crow's Nest">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
+                </p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
+                <p class="credits"><strong>Rigging by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Jacob
+                  Frumlater</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Olivia C.
+                  Davies, Rosemary Georgeson, & Emily Long</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Prec-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Precious Little</h2>
+              <p class="credits">by Madeleine George</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/PrecLittle1.png" alt="Precious Little">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;starstar
+                  theatre
+                </p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Mika
+                  Laulainen</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                <p class="credits"><strong>Scenography by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Jared Rashke</p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Zoe Wessler</p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Michelle Bowes</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Sara
+                  Andrina Brown, Therese Champagne, and Elizabeth Holliday</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Prob-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Probability</h2>
+              <p class="credits">by Tricia Trinh</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/prob1.png" alt="Probability">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Dusty Foot
+                  Productions
+                </p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tricia
+                  Trinh</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp; Nico Dicecco</p>
+                <p class="credits"><strong>Lights & Projections by</strong>&emsp;&ensp;Cameron Fraser</p>
+                <p class="credits"><strong>Animation by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rene Linares
+                </p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Dylan McNulty</p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Chantal Short</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Marissa
+                  Burton, Rami Kahlon, Rachel Renaud, & Alexandra Voicu</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="View-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>A Beautiful View</h2>
+              <p class="credits">by Daniel McIvor</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/view1.png" alt="A Beautiful View">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
+                  Productions</p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara
+                  McCarthy
+                  <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
+                  <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
+                  <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Sandy
+                    Peters
+                  </p>
+                  <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
+                  <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Ella Heatley-Mulhall</p>
+                  <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandra
+                    Medeiros * Melissa Oei</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Little-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Little Women</h2>
+              <p class="credits">by Allan Knee</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/littlewmn1.jpg" alt="Little Women">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Bring On
+                  Tomorrow Co.
+                </p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Lalainia
+                  Lindbjerg Strelau</p>
+                <p class="credits"><strong>Musical Direction by</strong> &emsp;&emsp;&ensp;Monique Creber</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Melanie Thompson</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Graham Ockley</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Todd Ablett
+                </p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Alex Livland</p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&ensp;Christina Sinosich</p>
+                <p class="credits"><strong>Featuring</strong></p>
+                <p class="credits">&emsp;&emsp;Michelle Creber, Ranae Miller, Jennifer Gillis, Julia MacLean, Monique
+                  Creber,
+                </p>
+                <p class="credits">&emsp;&emsp;William Tippery, Chris Adams, Stephen Aberle, Colleen Winton, & Erik Gow
+                </p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Rid-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>The Ridiculous Darkness</h2>
+              <p class="credits">by Wolfram Lotz</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/riddark2.png" alt="The Ridiculous Darkness">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Alley Theatre
+                </p>
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Marisa
+                  Emma Smith & Nyla Carpentier</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Liam Kearns</p>
+                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;John Webber</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Shizuka Kai
+                </p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Nita Bowerman</p>
+                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;James Coomber</p>
+                <p class="credits">
+                  <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Diana
+                  Bartosh</p>
+                <p class="credits"><strong>Featuring</strong></p>
+                <p class="credits">&emsp;&emsp;CLINT ANDREW, MIRANDA EDWARDS, EMILIE LECLERC, MUNISH SHARMA, AMANDA SUM,
+                  DANIEL ARNOLD,
+                </p>
+                <p class="credits">&emsp;&emsp;and 40+ members of various community groups from the greater Vancouver
+                  area
+                </p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Eotr-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>End of the Rainbow</h2>
+              <p class="credits">by Peter Quilter</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/EoTR7.png" alt="End of the Rainbow">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Claude
+                  Giroux</p>
+                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp; Nico Dicecco</p>
+                <p class="credits"><strong>Lights & Sound by</strong>&emsp;&emsp;&emsp;&emsp;&ensp;Stephen Bulat</p>
+                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp; Claude
+                  Giroux
+                </p>
+                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Tiffany Bishop</p>
+                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Janet
+                  Gigliotti, Jeff Hoffman, Gord Roberts, Matthew Simmons, and Robin Clegg</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Gps-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Generation Post Script</h2>
+              <p class="credits">by Mily mumford</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/GPS2.png" alt="Generation Post Script">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <div class="team">
+                  <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Nebula
+                    Company
+                    Theatre
+                  </p>
+                  <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Mily
+                    Mumford
+                  </p>
+                  <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Samantha Pawliuk</p>
+                  <p class="credits"><strong>Projection Design by</strong>&emsp;&emsp;&ensp;Cameron Fraser</p>
+                  <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Kougar Basi</p>
+                  <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;Bailey Creed</p>
+                  <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; CJ McGillivray</p>
+                  <p class="credits">
+                    <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nico
+                    Dicecco</p>
+                  <p class="credits"><strong>Featuring</strong></p>
+                  <p class="credits">&emsp;&emsp;Ming Hudson, Xander Williams, Bailey Creed, Levi Schneider, & Doug
+                    Ennenberg
+                  </p>
+                </div>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Beav-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Beaver Dreams “La Fièvre du Castor”</h2>
+              <p class="credits">by Maggie Winston</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/beaverdreams.png" alt="">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Lost & Found
+                  Puppet Co.
+                  <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Anne
+                    Lalancette</p>
+                  <p class="credits"><strong>Animation Design by</strong>&emsp;&emsp;&emsp; Molly Winston</p>
+                  <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp; Kendal Zier</p>
+                  <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Maggie
+                    Winston & Mika Laulainen</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+        <div id="Wild-details-lightbox" class="lightbox-basic mfp-hide">
+          <!--lightbox grid container -->
+          <div class="lightbox-grid">
+            <div class="lightbox-head">
+              <h2>Wild/Society</h2>
+              <p class="credits">by Mika Laulainen</p>
+            </div>
+            <!-- end of lightbox-head -->
+            <div class="lightbox-photo">
+              <img src="./assets/img/wildsoc1.png" alt="Wild/Society">
+            </div>
+            <!-- end of lightbox-photo -->
+            <div class="lightbox-main">
+              <div class="team">
+                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;starstar
+                  theatre
+                  <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Brian
+                    Cochrane & Jamie King</p>
+                  <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; Mika
+                    Laulainen & Melissa Oei</p>
+              </div>
+              <!-- end of team -->
+              <div class="snippet">
+                <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
+                  dolore,
+                  quisquam doloribus blanditiis ullam accusamus cupiditate neque expedita? Ratione repudiandae
+                  architecto
+                  ipsa fugit ut eius aspernatur possimus error praesentium placeat libero, deleniti laudantium,
+                  voluptates
+                  quis dignissimos recusandae sequi. In, magni. Vitae quod sunt, sapiente veniam laborum vel quam!</p>
+              </div>
+              <!-- end of snippet -->
+            </div>
+            <!-- end of lightbox-main -->
+          </div>
+          <!-- end of lightbox grid container -->
+        </div>
+      </div>
+      <!--end of Details Lightboxes -->
     </main>
     <!--end of Main Content -->
     <!--Footer-->
