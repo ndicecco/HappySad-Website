@@ -61,19 +61,19 @@
         <div class="wrapper">
           <div class="portfolio-nav">
             <ul class="portfolio-menu">
-              <li class="port-btn active">
+              <li class="port-btn active" id="li1">
                 <a href="#" class="portfolio-menu-item" id="all">All Shows</a>
               </li>
-              <li class="port-btn">
+              <li class="port-btn" id="li2">
                 <a href="#" class="portfolio-menu-item" id="sm">Stage Management</a>
               </li>
-              <li class="port-btn">
+              <li class="port-btn" id="li3">
                 <a href="#" class="portfolio-menu-item" id="pm">Production Management</a>
               </li>
-              <li class="port-btn">
+              <li class="port-btn" id="li4">
                 <a href="#" class="portfolio-menu-item" id="sd">Sound Design</a>
               </li>
-              <li class="port-btn">
+              <li class="port-btn" id="li5">
                 <a href="#" class="portfolio-menu-item" id="pw">Paperwork Samples</a>
               </li>
             </ul>
@@ -376,15 +376,29 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jennifer
-                  Mascall</p>
-                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jennifer Mascall, Jacq
-                  Smith, & Jamie Robinson</p>
-                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-                <p class="credits"><strong>Videography by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Moves Media</p>
-                <p class="credits"><strong>Dancers</strong>
-                  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Eowynn Enquist, Avery Smith, Kaia Shukin,
-                  Rachel Murray, Marcy Mills, & Daria Mikhaylyuk</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Jennifer Mascall</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jennifer Mascall, Jacq Smith, & Jamie Robinson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Production Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Videography by</strong></td>
+                    <td>Moves Media</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dancers</strong></td>
+                    <td>Eowynn Enquist, Avery Smith, Kaia Shukin,
+                      Rachel Murray, Marcy Mills, & Daria Mikhaylyuk</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -416,16 +430,29 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
-                </p>
-                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Jonathon Kim</p>
-                <p class="credits"><strong>Video Support by</strong>&emsp;&emsp;&emsp;&emsp;&ensp;Chimerik</p></br>
-                <p class="credits"><strong>Featuring</strong></p>
-                <p class="credits">&emsp;&emsp;<strong>Kiri</strong> by Louise Potiki Bryant</p>
-                <p class="credits">&emsp;&emsp;<strong>Link</strong> by Aria Evans</p>
-                <p class="credits">&emsp;&emsp;<strong>Same but Different</strong> by Henrietta Baird & Mariaa Randall
-                </p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>O. Dela Arts</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Production Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Jonathon Kim</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Video Support by</strong></td>
+                    <td>Chimerik</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td><strong>Kiri</strong> by Louise Potiki Bryant</br><strong>Link</strong> by Aria
+                      Evans</br><strong>Same but Different</strong> by Henrietta Baird & Mariaa Randall</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -458,9 +485,9 @@
                 <div class="showtitle">
                   <h4>Sound Design Samples</h4>
                   <div class="buttons">
-                    <button class="play" id="s0" onclick="playOrPauseSong(0)"><img
+                    <button class="play" id="s0"><img
                         src="./assets/img/play.png" /></button>
-                    <button class="restart" onclick="resetSong(0)"><img src="./assets/img/Restart.png" /></button>
+                    <button class="restart""><img src="./assets/img/Restart.png" /></button>
                     <div id="seek-bar">
                       <div id="fill0"></div>
                     </div>
@@ -472,21 +499,44 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Backbone
-                  Theatre
-                  Collective
-                </p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Wendy
-                  Bollard</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Catherine McLaren</p>
-                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;&nbsp;Zoe Bellis</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Celeste English</p>
-                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
-                </p>
-                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Assistant Direction by</strong> &emsp;&ensp;Sandra Medeiros</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kate
-                  Besworth</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Backbone Theatre Collective</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Wendy Bollard</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Assistant Direction by</strong></td>
+                    <td>Sandra Medeiros</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Catherine McLaren</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Production Management by</strong></td>
+                    <td>Zoe Bellis</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Celeste English</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Ariel Slack</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Kate Besworth</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -518,22 +568,48 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Children's
-                  Theatre of Richmond Association</p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Emily
-                  Matchette</p>
-                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Jesse Alvarez</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Gerald King</p>
-                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Brian Ball
-                </p>
-                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;James Menear</p>
-                <p class="credits"><strong>Technical Direction by</strong> &emsp;Robin Richardson</p>
-                <p class="credits">
-                  <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Catherine
-                  McLaren</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;37 young
-                  actors between ages 7 and 17</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Children's Theatre of Richmond Association</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Emily Matchette</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ASM</strong></td>
+                    <td>Catherine McLaren</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Gerald King</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>James Menear</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical Direction by</strong></td>
+                    <td>Robin Richardson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>37 young actors between ages 7 and 17</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -562,7 +638,7 @@
             <div class="lightbox-photo">
               <img src="./assets/img/dancing1a.jpg" alt="Dancing Lessons">
               <!-- sound sample overlay-->
-              <div class="overlay">
+              <div class="overlay" id="soundbox">
                 <div class="showtitle">
                   <h4>Sound Design Samples</h4>
                   <div class="buttons">
@@ -580,21 +656,45 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
-                  Productions</p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Sarah
-                  Rodgers</p>
-                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Melissa Sciaretta</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Taylor Janzen</p>
-                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Ariel Slack
-                </p>
-                <p class="credits"><strong>Sound & Projection by</strong>&emsp;&ensp;Nico Dicecco</p>
-                <p class="credits"><strong>Videography by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;Trevor Meyer</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandra
-                  Medeiros & Andrew Coghlan</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Naked Goddess Productions</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Sarah Rodgers</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Melissa Sciaretta</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Taylor Janzen</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set & Prop Design by</strong></td>
+                    <td>Ariel Slack</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Projection & Sound Design by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Videography by</strong></td>
+                    <td>Trevor Meyer</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Sandra Medeiros & Andrew Coghlan</td>
+                  </tr>
+                </table>
               </div>
-              <!-- end of team -->
               <div class="snippet">
                 <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
                   dolore,
@@ -624,12 +724,28 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Jane Gabriels
-                </p>
-                <p class="credits"><strong>Prod. Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Alexa Mardon</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Kristy
-                  Janvier, Eric Cheung, Zahra Shahab and nine other short pieces</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Jane Gabriels</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Production Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Alexa Mardon</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Kristy Janvier, Eric Cheung, Zahra Shahab and nine other short pieces</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -676,13 +792,32 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;Phay
-                  Moores</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;Nicole Weismiller</p>
-                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Featuring</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Nyla
-                  Carpentier</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Nyla Carpentier</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Phay Moores</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Nicole Weismiller</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Nyla Carpentier</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -714,31 +849,52 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Renegade Arts
-                  Co.</p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Chris
-                  Adams</p>
-                <p class="credits"><strong>Choreography by</strong> &emsp;&emsp;&emsp;&emsp;&nbsp;Nicol Spinola</p>
-                <p class="credits"><strong>Musical Direction by</strong> &emsp;&emsp;&ensp;Kerry O'Donovan</p>
-                <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting & Sound by</strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;Stephen Bulat</p>
-                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;Brian
-                  Ball</p>
-                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Donnie Tejani</p>
-                <p class="credits">
-                  <strong>ASM</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Taylor
-                  MacKinnon</p>
-                <p class="credits">
-                  <strong>Dresser</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Claire Turner</p>
-                <p class="credits"><strong>Featuring</strong></p>
-                <p class="credits">&emsp;&emsp;Victor Hunter, Synthia Yusuf, Scott Walters, Madeleine Suddaby, Charlie
-                  Deagnon,
-                </p>
-                <p class="credits">&emsp;&emsp;Chad Matchette, Jesse Alvarez, Joseph Spitale, Sean Anthony, Dane Smit,
-                  Megan Greenwood,</p>
-                <p class="credits">&emsp;&emsp;Joscelyne Tamburri, Kate Yahn, Tessa Trach, Tamara Vishniakoff, Lucia
-                  Forward, Brynne Harper,</p>
-                <p class="credits">&emsp;&emsp;Emily Matchette, & Matt Briard</p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Renegade Arts Co.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Chris Adams</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Nicol Spinola</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Musical Direction by</strong></td>
+                    <td>Kerry O'Donovan</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>ASM</strong></td>
+                    <td>Taylor MacKinnon</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting & Sound Design by</strong></td>
+                    <td>Stephen Bulat</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Costume Design by</strong></td>
+                    <td>Donnie Tejani</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Dresser</strong></td>
+                    <td>Claire Turner</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Victor Hunter, Synthia Yusuf, Scott Walters,</br> Madeleine Suddaby, Charlie Deagnon, Chad Matchette, </br>Jesse Alvarez, Joseph Spitale, Sean Anthony, Dane Smit, </br>Megan Greenwood, Joscelyne Tamburri, Kate Yahn, </br>Tessa Trach, Tamara Vishniakoff, Lucia Forward, </br>Brynne Harper, Emily Matchette, & Matt Briard</td>
+                  </tr>
+                </table>
               </div>
               <!-- end of team -->
               <div class="snippet">
@@ -770,28 +926,45 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
-                <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Slamming Door
-                  Collective</p>
-                <p class="credits"><strong>Directed by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;Tamara
-                  McCarthy</p>
-                <p class="credits"><strong>Rhsl. Stage Mgmt by</strong> &emsp;&emsp;&emsp;&nbsp;Victoria Snashall</p>
-                <p class="credits"><strong>Prod. Stage Mgmt by</strong> &emsp;&emsp;&emsp;Nico Dicecco</p>
-                <p class="credits"><strong>Lighting Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Celeste English</p>
-                <p class="credits"><strong>Set Design by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Sandy Peters
-                </p>
-                <p class="credits"><strong>Sound Design by</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;Matthew
-                  MacDonald-Bain
-                </p>
-                <p class="credits"><strong>Costume Design by</strong>&emsp;&emsp;&emsp;&emsp;&nbsp;Chantal Short &
-                  Cheyenne Mabberley</p>
-                <p class="credits"><strong>Featuring</strong></p>
-                <p class="credits">&emsp;&emsp;Genevieve Fleming, Dylan Floyde, Stephen Aberle, Elizabeth Kirkland,
-                  Michelle Morris,</p>
-                <p class="credits">&emsp;&emsp;Raes Calvert, Mason Temple, Cheyenne Mabberley, Melissa Oei, & Jessica
-                  Hood
-                </p>
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Slamming Door Collective</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Tamara McCarthy</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Rehersal Stage Management by</strong></td>
+                    <td>Victoria Snashall</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Production Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Celeste English</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Sandy Peters</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>Matthew MacDonald-Bain</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Costume Design by</strong></td>
+                    <td>Chantal Short & Cheyenne Mabberley</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>Genevieve Fleming, Dylan Floyde, Stephen Aberle, Elizabeth Kirkland,Michelle Morris, Raes Calvert, Mason Temple, Cheyenne Mabberley, Melissa Oei, & Jessica Hood</td>
+                  </tr>
+                </table>
               </div>
-              <!-- end of team -->
               <div class="snippet">
                 <p class="blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit doloremque ducimus
                   dolore,
@@ -820,6 +993,47 @@
             </div>
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
+              <div class="team">
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Children's Theatre of Richmond Association</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Emily Matchette</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Gerald King</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>James Menear</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical Direction by</strong></td>
+                    <td>Robin Richardson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>37 young actors between ages 7 and 17</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end of team -->
               <div class="team">
                 <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Naked Goddess
                   Productions</p>
@@ -866,6 +1080,47 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Children's Theatre of Richmond Association</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Emily Matchette</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Gerald King</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>James Menear</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical Direction by</strong></td>
+                    <td>Robin Richardson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>37 young actors between ages 7 and 17</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end of team -->
+              <div class="team">
                 <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;New Works & O.
                   Dela Arts
                 </p>
@@ -907,6 +1162,47 @@
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
               <div class="team">
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Children's Theatre of Richmond Association</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Emily Matchette</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Gerald King</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>James Menear</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical Direction by</strong></td>
+                    <td>Robin Richardson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>37 young actors between ages 7 and 17</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end of team -->
+              <div class="team">
                 <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;O. Dela Arts
                 </p>
                 <p class="credits"><strong>Stage Management by</strong> &emsp;&emsp;&nbsp;Nico Dicecco</p>
@@ -945,6 +1241,47 @@
             </div>
             <!-- end of lightbox-photo -->
             <div class="lightbox-main">
+              <div class="team">
+                <table class="credits">
+                  <tr>
+                    <td><strong>Produced by</strong></td>
+                    <td>Children's Theatre of Richmond Association</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Directed by</strong></td>
+                    <td>Emily Matchette</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Choreography by</strong></td>
+                    <td>Jesse Alvarez</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Stage Management by</strong></td>
+                    <td>Nico Dicecco</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Lighting Design by</strong></td>
+                    <td>Gerald King</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Set Design by</strong></td>
+                    <td>Brian Ball</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sound Design by</strong></td>
+                    <td>James Menear</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Technical Direction by</strong></td>
+                    <td>Robin Richardson</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Featuring</strong></td>
+                    <td>37 young actors between ages 7 and 17</td>
+                  </tr>
+                </table>
+              </div>
+              <!-- end of team -->
               <div class="team">
                 <p class="credits"><strong>Produced by</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;starstar
                   theatre

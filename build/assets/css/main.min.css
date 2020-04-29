@@ -200,6 +200,15 @@ body {
   -webkit-text-size-adjust: 100%;
   overflow-x: hidden; }
 
+table {
+  border-collapse: collapse;
+  width: 100%; }
+
+th, td {
+  padding: 0.25rem;
+  text-align: left;
+  border: none; }
+
 .bg-wrap {
   background: #406E8E;
   max-width: 1440px;
@@ -966,6 +975,15 @@ body {
 
 .lightbox-main {
   grid-area: main; }
+
+.team table {
+  min-width: 365px;
+  max-width: 550px; }
+
+.team .credits {
+  font-size: 11px; }
+  .team .credits td {
+    padding-right: 10px; }
 
 .snippet {
   grid-area: foot;
