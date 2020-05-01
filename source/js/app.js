@@ -2,11 +2,23 @@ import Swup from 'swup';
 const swup = new Swup();
 
 function init() {
-  if (document.querySelector('#past-productions')) {
-    //musicbox code
+  //global variables
+  let sound = new Audio();
+  let currentIndex = 0;
+  let currentId = '';
+
+  //global functions
+
+
+  //module-specific functions
+  //to run when magnific-popup opens a page with a sound design player
+  function openLightbox(thing) {
+    //read-only variables
+    const playArray = document.querySelectorAll('.play');
+    const nextArray = document.querySelectorAll('.restart');
+    const thisBox = thing;
+
     //sounds
-    const playArray = document.querySelectorAll('.play'); 
-    const restartArray = document.querySelectorAll('.restart'); 
     const waltz = "./assets/audio/waltz.wav";
     const ghost = "./assets/audio/ghost.wav";
     const books = "./assets/audio/books.wav";
@@ -20,133 +32,163 @@ function init() {
     const halls = "./assets/audio/halls.mp3";
     const away = "./assets/audio/away.mp3";
     const oceans = "";
-    const spineArray = [waltz, ghost, books, train, tube, wobble]
-    const danceArray = [jenga, whale, uptown]
-    const bestArray = [jingle, halls, away]
-    const dissArray = [oceans]
-    let fillBar = '';
-    let lastClicked = 'word';
-    let lastReset = 'word';
-    let sound = new Audio();
+    const spineArray = [waltz, ghost, books, train, tube, wobble];
+    const danceArray = [jenga, whale, uptown];
+    const bestArray = [jingle, halls, away];
+    const dissArray = [oceans];
 
-    //add event listeners to all the musicbox buttons
-    function addListeners() {
-      for (let j = 0; j < playArray.length; j++) {
-        playArray[j].addEventListener("click", playOrPauseSong);
-      }
-      for (let j = 0; j < restartArray.length; j++) {
-        restartArray[j].addEventListener("click", resetSong);
-      }
-      console.log(playArray);
-      console.log(restartArray);
-    }
+    //variables
+    let currentArray = spineArray;
 
-    function getRandomInt(max) {
-      return Math.floor(Math.random() * Math.floor(max));
-    }
-
-    function playOrPauseSong(d) {
-      //d is the id of the controller that was just clicked
-      var d = d;
-      console.log(d.target.parentElement.id);
-      if (isNaN(lastClicked)) {
-        //checks to see if this is the first sound you've clicked since loading the page
-        //if it is, great! Move on to loading the sound
-      } else if (sound.currentTime !== 0 && d == lastClicked && lastReset !== d) {
-        //checks if a sound is mid playback AND the sound controller you just clicked is the same as the last one you clicked AND the last reset used is also part of this controller
-        //if so, great! Move on to loading the sound
-      } else if (sound.currentTime == 0 && d == lastClicked && lastReset == d) {
-        //checks if the loaded sound has been reset to 0 AND what you just clicked is the same controller as lastClicked AND what you last reset is the same controller
-        //if so, great! Move on to loading the sound
-      } else if (sound.currentTime !== 0 && d == lastClicked && lastReset == d && sound.paused == false) {
-        //checks if the loaded sound is mid playback AND the justClicked is the same controller as lastClicked AND as lastReset AND the song is not currently paused
-        //in this case, you have reset this controller but you played the sound again, so you're probably trying to pause the song
-        sound.pause();
-        document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/play.png');
-        return;
-      } else if (sound.currentTime !== 0 && d == lastClicked && d == lastReset && sound.paused == true) {
-        //checks if the loaded sound is mid playback AND the last button you clicked is the same as the last one you reset AND the sound is paused
-        //you're probably trying to play the sound you paused after resetting it at least once
-        sound.play();
-        document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/pause.png');
-        return;
-      } else {
-        //if none of the above is true, then you must have interacted with the play button of a new controller, so we should reset the sound of whatever controller was last used
-        resetSong(lastClicked);
-      };
-      //check if the lastClicked is not the same as what was just clicked
-      if (lastClicked !== d) {
-        //if true, load a new Audio
-        sound = new Audio();
-      };
-      //set lastClicked to what was just clicked
-      //this may be broken now that I've changed what d is
-      lastClicked = d;
-      if(d.target.parentElement.id == "s0") {
-        //if Spine was clicked, load a song from that show
-        console.log("Spine");
-        var num = getRandomInt(spineArray.length);
-        var i = spineArray[num];
-      } else if (d.target.parentElement.id == "s6") {
-        //if Dancing Lessons was clicked, load a song from that show
-        console.log("Dancing Lessons");
-        var num = getRandomInt(danceArray.length);
-        var i = danceArray[num];
-      } else if (d.target.parentElement.id == "s11") {
-        //if Dissection was clicked, load a song from that show
-        console.log("Dissection");
-        var num = getRandomInt(dissArray.length);
-        var i = dissArray[num];
-      } else if (d.target.parentElement.id == "s11") {
-        //if Dissection was clicked, load a song from that show
-        console.log("Dissection");
-        var num = getRandomInt(dissArray.length);
-        var i = dissArray[num];
-      } else {
-        //default
-        return;
+    if (document.querySelector('#soundbox')) {
+      //add event listeners to all the musicbox buttons
+      function addListeners() {
+        for (let j = 0; j < playArray.length; j++) {
+          playArray[j].addEventListener("click", togglePlay);
+        }
+        for (let j = 0; j < nextArray.length; j++) {
+          nextArray[j].addEventListener("click", nextSong);
+        }
       }
-      if (sound.readyState == 0) {
+
+      function preloadAudio() {
+        var i = currentArray[currentIndex];
         sound = new Audio(i);
-        sound.play();
-        document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/pause.png');
-        sound.addEventListener('timeupdate', function () {
-          fillBar = document.getElementById("fill" + d);
-          var position = sound.currentTime / sound.duration;
-          fillBar.style.width = position * 100 + '%';
-        });
-      } else if (sound.readyState == 4 && sound.paused) {
-        sound.play();
-        document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/pause.png');
-      } else {
         sound.pause();
-        document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/play.png');
       }
-    }
 
-    function resetSong(d) {
-      //d is the id of the controller that was just clicked
-      lastReset = d;
-      if (lastClicked !== lastReset) {
-        return;
+      function setPlayIcons(icon) {
+        //grab all the play buttons
+        let playButtons = document.querySelectorAll('.play');
+        //go through each icon and set it to the icon argument
+        for (let i = 0; i < playButtons.length; i++) {
+          let v = playButtons[i].id;
+          //set the play button icon to the pause symbol
+          document.querySelector('#' + v + ' img').setAttribute('src', './assets/img/' + icon + '.png');
+        }
       }
-      if (lastClicked == lastReset) {}
-      clearFills();
-      sound.pause();
-      sound.currentTime = 0;
-      document.querySelector('#s' + lastClicked + ' img').setAttribute('src', './assets/img/play.png');
-      document.querySelector('#s' + d + ' img').setAttribute('src', './assets/img/play.png');
-    }
 
-    function clearFills() {
-      for (let i = 0; i < tunes.length; i++) {
-        var fillBar = document.getElementById("fill" + i);
-        fillBar.style.width = 0;
+      function setArray(w) {
+        //set the currentArray to the correct array
+        currentId = w.currItem.el[0].id;
+        currentArray = whichArray(currentId);
+      }
+
+      function whichArray(d) {
+        switch (d) {
+          case 'spine':
+          case 's0':
+            return spineArray;
+          case 'best':
+          case 's3':
+            return bestArray;
+          case 'dance':
+          case 's6':
+            return danceArray;
+          case 'diss':
+          case 's11':
+            return dissArray;
+          default:
+            console.log("array switcher broke")
+            break;
+        }
+      }
+
+      function togglePlay(e) {
+        //add a listener to the escape button
+        let escButton = document.querySelector('.mfp-close');
+        escButton.addEventListener("click", escSound);
+        //turn the play icon into a pause icon
+        toggleIcon(e);
+        //update the title
+        updateTitle();
+        //load the audio
+        return sound.paused ? sound.play() : sound.pause();
       };
+
+      function toggleIcon(e) {
+        // d is the id of the controller that was just clicked
+        let d = e.target.parentElement.id;
+        return sound.paused ? document.querySelector('#' + d + ' img').setAttribute('src', './assets/img/pause.png') : document.querySelector('#' + d + ' img').setAttribute('src', './assets/img/play.png');
+      }
+
+      function nextSong(e) {
+        //pause the current sound
+        sound.pause();
+        //add 1 to the current index
+        currentIndex++;
+        //if the current index now exceeds the length of the current array, set it back to 0
+        if (currentIndex >= currentArray.length) {
+          currentIndex = 0;
+        }
+        // load the new sound
+        let i = currentArray[currentIndex];
+        sound = new Audio(i);
+        //play the new sound
+        sound.play();
+        //set play icons to
+        setPlayIcons('pause');
+        //update the title
+        updateTitle();
+      }
+
+      function updateTitle() {
+        // animate the title to 0 opacity
+        gsap.to('.showtitle h4', {
+          duration: 0.5,
+          opacity: 0,
+          onComplete: titleSwap
+        });
+        //change the title
+        function titleSwap() {
+          let element = document.querySelector(".showtitle h4");
+          element.innerHTML = (currentIndex + 1) + " / " + (currentArray.length);
+          //animate the new title back in
+          gsap.to('.showtitle h4', {
+            duration: 0.5,
+            opacity: 1
+          });
+        }
+
+      }
+
+      function audioInit() {
+        //call addListeners
+        addListeners();
+        setArray(thisBox);
+        preloadAudio();
+      }
+
+      //initialize audio
+      audioInit();
+
+      //end of if(#soundbox) statement
     }
-    //call addListeners
-    addListeners();
+    //end of openLightbox function
   }
+
+  //to run when mfp closes a page
+  function escSound() {
+    //set all the play button icons to play
+    //grab all the play buttons
+    let playButtons = document.querySelectorAll('.play');
+    //go through each icon and set it to the icon argument
+    for (let i = 0; i < playButtons.length; i++) {
+      let v = playButtons[i].id;
+      //set the play button icon to the pause symbol
+      document.querySelector('#' + v + ' img').setAttribute('src', './assets/img/play.png');
+    }
+    //reset the title
+    let element = document.querySelector(".showtitle h4");
+    element.innerHTML = "Sound Design Samples";
+    //pause the sound
+    sound.pause();
+    //reset the current sounds current time to 0
+    sound.currentTime = 0;
+    //reset the current index to 0
+    currentIndex = 0;
+  }
+
   if (document.querySelector('#portfolio-selector')) {
     //Portfolio Navigation
     const navArray = document.querySelectorAll('.portfolio-menu a');
@@ -280,7 +322,16 @@ function init() {
     $(document).ready(function () {
       $('.open-popup-link').magnificPopup({
         type: 'inline',
-        midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
+        midClick: true,
+        callbacks: {
+          open: function () {
+            openLightbox(this);
+          },
+          close: function () {
+            escSound();
+          }
+          // e.t.c.
+        }
       });
     });
   }
