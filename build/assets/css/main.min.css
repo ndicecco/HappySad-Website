@@ -401,79 +401,6 @@ hr {
   opacity: 1;
   transition: 0.8s ease; }
 
-#nav {
-  max-width: 1100px;
-  margin: 0 auto; }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
-  grid-gap: 0;
-  margin: 0 auto;
-  position: relative; }
-  @media screen and (max-width: 367px) {
-    .grid-container {
-      display: block; } }
-  .grid-container img {
-    width: 100%; }
-
-.grid-item {
-  position: relative;
-  overflow: hidden; }
-  .grid-item:hover .title, .grid-item:active .title, .grid-item:focus .title {
-    opacity: 1;
-    color: #EAF2EF; }
-  .grid-item:hover .nav-image img, .grid-item:active .nav-image img, .grid-item:focus .nav-image img {
-    -webkit-filter: blur(2px);
-    filter: blur(2px); }
-  @media screen and (max-width: 733px) {
-    .grid-item {
-      max-width: 512px;
-      margin: 0 auto;
-      box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5); } }
-
-.nav-photo {
-  line-height: 0;
-  display: block; }
-
-.nav-image img {
-  -webkit-filter: blur(0px);
-  filter: blur(0px);
-  transition: -webkit-filter 0.3s ease-in;
-  transition: filter 0.3s ease-in;
-  transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
-  transform: scale(1.1); }
-
-.title {
-  /*general*/
-  z-index: 1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: #23252879;
-  /*typographic styles*/
-  color: #EAF2EF;
-  font-size: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  /*position text in center of div */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* hide the title by default */
-  opacity: 0;
-  transition: opacity .5s; }
-
-/* for touch screen devices */
-@media (hover: none) {
-  .title {
-    opacity: 1; }
-  .nav-image img {
-    -webkit-filter: blur(2px);
-    filter: blur(2px); } }
-
 .home {
   display: inline-block;
   margin: 0 auto;
@@ -627,23 +554,123 @@ html.is-animating .transition-scale {
 html.is-animating .transition-move {
   transform: translate(-5px, -5px); }
 
-body {
-  height: 100%; }
-
-#gallery {
+#nav {
+  max-width: 1100px;
   margin: 0 auto; }
 
-.inner-wrap-odd,
-.inner-wrap-even {
-  max-width: 1300px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(367px, 1fr));
+  grid-gap: 0;
   margin: 0 auto;
-  padding-bottom: 1em; }
+  position: relative; }
+  @media screen and (max-width: 367px) {
+    .grid-container {
+      display: block; } }
+  .grid-container img {
+    width: 100%; }
 
-.inner-wrap-odd {
-  background: none; }
+.grid-item {
+  position: relative;
+  overflow: hidden; }
+  .grid-item:hover .title, .grid-item:active .title, .grid-item:focus .title {
+    opacity: 1;
+    color: #EAF2EF; }
+  .grid-item:hover .nav-image img, .grid-item:active .nav-image img, .grid-item:focus .nav-image img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px); }
+  @media screen and (max-width: 733px) {
+    .grid-item {
+      max-width: 512px;
+      margin: 0 auto;
+      box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5); } }
 
-.inner-wrap-even {
-  background: none; }
+.nav-photo {
+  line-height: 0;
+  display: block; }
+
+.nav-image img {
+  -webkit-filter: blur(0px);
+  filter: blur(0px);
+  transition: -webkit-filter 0.3s ease-in;
+  transition: filter 0.3s ease-in;
+  transition: filter 0.3s ease-in, -webkit-filter 0.3s ease-in;
+  transform: scale(1.1); }
+
+.title {
+  /*general*/
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #23252879;
+  /*typographic styles*/
+  color: #EAF2EF;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  /*position text in center of div */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* hide the title by default */
+  opacity: 0;
+  transition: opacity .5s; }
+
+/* for touch screen devices */
+@media (hover: none) {
+  .title {
+    opacity: 1; }
+  .nav-image img {
+    -webkit-filter: blur(2px);
+    filter: blur(2px); } }
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #23252879;
+  border-radius: 6px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical; }
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #424B54;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #23252879; }
+
+/* Add a background color and some padding around the form */
+.contact-container {
+  border-radius: 5px;
+  padding: 20px; }
+
+.lightbox-form {
+  position: relative;
+  max-width: 71.875rem;
+  margin: 2.5rem auto;
+  padding: 3rem 1rem;
+  background-color: #fff;
+  text-align: left;
+  border-radius: 14px; }
+
+.lightbox-head h3 {
+  color: #232528;
+  text-align: center; }
+
+.antispam {
+  display: none; }
 
 .grid-title {
   margin: 30px 50px 50px 50px;

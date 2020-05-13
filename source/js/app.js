@@ -1,194 +1,182 @@
 import Swup from 'swup';
 const swup = new Swup();
 
+//init() runs after every page change
 function init() {
   //global variables
+  //read-only variables
+  const playArray = document.querySelectorAll('.play');
+  const nextArray = document.querySelectorAll('.restart');
+
+  //sound files
+  const waltz = "./assets/audio/waltz.wav";
+  const ghost = "./assets/audio/ghost.wav";
+  const books = "./assets/audio/books.wav";
+  const train = "./assets/audio/train.wav";
+  const tube = "./assets/audio/tube.mp3";
+  const wobble = "./assets/audio/wobble.wav";
+  const jenga = "./assets/audio/jenga.wav";
+  const whale = "./assets/audio/whale.wav";
+  const uptown = "./assets/audio/uptown.wav";
+  const jingle = "./assets/audio/jingle.mp3";
+  const halls = "./assets/audio/halls.mp3";
+  const away = "./assets/audio/away.mp3";
+  const oceans = "";
+
+  //sound arrays
+  const spineArray = [waltz, ghost, books, train, tube, wobble];
+  const danceArray = [jenga, whale, uptown];
+  const bestArray = [jingle, halls, away];
+  const dissArray = [oceans];
+
+  //variables
+  let currentArray = spineArray;
   let sound = new Audio();
   let currentIndex = 0;
   let currentId = '';
 
   //global functions
 
-
-  //module-specific functions
-  //to run when magnific-popup opens a page with a sound design player
-  function openLightbox(thing) {
-    //read-only variables
-    const playArray = document.querySelectorAll('.play');
-    const nextArray = document.querySelectorAll('.restart');
-    const thisBox = thing;
-
-    //sounds
-    const waltz = "./assets/audio/waltz.wav";
-    const ghost = "./assets/audio/ghost.wav";
-    const books = "./assets/audio/books.wav";
-    const train = "./assets/audio/train.wav";
-    const tube = "./assets/audio/tube.mp3";
-    const wobble = "./assets/audio/wobble.wav";
-    const jenga = "./assets/audio/jenga.wav";
-    const whale = "./assets/audio/whale.wav";
-    const uptown = "./assets/audio/uptown.wav";
-    const jingle = "./assets/audio/jingle.mp3";
-    const halls = "./assets/audio/halls.mp3";
-    const away = "./assets/audio/away.mp3";
-    const oceans = "";
-    const spineArray = [waltz, ghost, books, train, tube, wobble];
-    const danceArray = [jenga, whale, uptown];
-    const bestArray = [jingle, halls, away];
-    const dissArray = [oceans];
-
-    //variables
-    let currentArray = spineArray;
-
-    if (document.querySelector('#soundbox')) {
-      //add event listeners to all the musicbox buttons
-      function addListeners() {
-        for (let j = 0; j < playArray.length; j++) {
-          playArray[j].addEventListener("click", togglePlay);
-        }
-        for (let j = 0; j < nextArray.length; j++) {
-          nextArray[j].addEventListener("click", nextSong);
-        }
-      }
-
-      function preloadAudio() {
-        var i = currentArray[currentIndex];
-        sound = new Audio(i);
-        sound.pause();
-      }
-
-      function setPlayIcons(icon) {
-        //grab all the play buttons
-        let playButtons = document.querySelectorAll('.play');
-        //go through each icon and set it to the icon argument
-        for (let i = 0; i < playButtons.length; i++) {
-          let v = playButtons[i].id;
-          //set the play button icon to the pause symbol
-          document.querySelector('#' + v + ' img').setAttribute('src', './assets/img/' + icon + '.png');
-        }
-      }
-
-      function setArray(w) {
-        //set the currentArray to the correct array
-        currentId = w.currItem.el[0].id;
-        currentArray = whichArray(currentId);
-      }
-
-      function whichArray(d) {
-        switch (d) {
-          case 'spine':
-          case 's0':
-            return spineArray;
-          case 'best':
-          case 's3':
-            return bestArray;
-          case 'dance':
-          case 's6':
-            return danceArray;
-          case 'diss':
-          case 's11':
-            return dissArray;
-          default:
-            console.log("array switcher broke")
-            break;
-        }
-      }
-
-      function togglePlay(e) {
-        //add a listener to the escape button
-        let escButton = document.querySelector('.mfp-close');
-        escButton.addEventListener("click", escSound);
-        //turn the play icon into a pause icon
-        toggleIcon(e);
-        //update the title
-        updateTitle();
-        //load the audio
-        return sound.paused ? sound.play() : sound.pause();
-      };
-
-      function toggleIcon(e) {
-        // d is the id of the controller that was just clicked
-        let d = e.target.parentElement.id;
-        return sound.paused ? document.querySelector('#' + d + ' img').setAttribute('src', './assets/img/pause.png') : document.querySelector('#' + d + ' img').setAttribute('src', './assets/img/play.png');
-      }
-
-      function nextSong(e) {
-        //pause the current sound
-        sound.pause();
-        //add 1 to the current index
-        currentIndex++;
-        //if the current index now exceeds the length of the current array, set it back to 0
-        if (currentIndex >= currentArray.length) {
-          currentIndex = 0;
-        }
-        // load the new sound
-        let i = currentArray[currentIndex];
-        sound = new Audio(i);
-        //play the new sound
-        sound.play();
-        //set play icons to
-        setPlayIcons('pause');
-        //update the title
-        updateTitle();
-      }
-
-      function updateTitle() {
-        // animate the title to 0 opacity
-        gsap.to('.showtitle h4', {
-          duration: 0.5,
-          opacity: 0,
-          onComplete: titleSwap
-        });
-        //change the title
-        function titleSwap() {
-          let element = document.querySelector(".showtitle h4");
-          element.innerHTML = (currentIndex + 1) + " / " + (currentArray.length);
-          //animate the new title back in
-          gsap.to('.showtitle h4', {
-            duration: 0.5,
-            opacity: 1
-          });
-        }
-
-      }
-
-      function audioInit() {
-        //call addListeners
-        addListeners();
-        setArray(thisBox);
-        preloadAudio();
-      }
-
-      //initialize audio
-      audioInit();
-
-      //end of if(#soundbox) statement
+  //add event listeners to all the musicbox buttons
+  function addListeners() {
+    for (let j = 0; j < playArray.length; j++) {
+      playArray[j].addEventListener("click", togglePlay);
     }
-    //end of openLightbox function
+    for (let j = 0; j < nextArray.length; j++) {
+      nextArray[j].addEventListener("click", nextSong);
+    }
   }
 
-  //to run when mfp closes a page
-  function escSound() {
-    //set all the play button icons to play
+  function togglePlay(e) {
+    sound.paused ? sound.play() : sound.pause();
+  }
+
+  function setPlayIcons(icon) {
     //grab all the play buttons
     let playButtons = document.querySelectorAll('.play');
     //go through each icon and set it to the icon argument
     for (let i = 0; i < playButtons.length; i++) {
       let v = playButtons[i].id;
       //set the play button icon to the pause symbol
-      document.querySelector('#' + v + ' img').setAttribute('src', './assets/img/play.png');
+      document.querySelector('#' + v + ' img').setAttribute('src', './assets/img/' + icon + '.png');
     }
-    //reset the title
-    let element = document.querySelector(".showtitle h4");
-    element.innerHTML = "Sound Design Samples";
-    //pause the sound
-    sound.pause();
-    //reset the current sounds current time to 0
-    sound.currentTime = 0;
-    //reset the current index to 0
-    currentIndex = 0;
   }
 
+  function updateTitle() {
+    // animate the title to 0 opacity
+    gsap.to('.showtitle h4', {
+      duration: 0.5,
+      opacity: 0,
+      onComplete: titleSwap
+    });
+    //change the title
+    function titleSwap() {
+      let element = document.querySelector(".showtitle h4");
+      element.innerHTML = (currentIndex + 1) + " / " + (currentArray.length);
+      //animate the new title back in
+      gsap.to('.showtitle h4', {
+        duration: 0.5,
+        opacity: 1
+      });
+    }
+
+  }
+
+  function nextSong(e) {
+    //pause the current sound
+    sound.pause();
+    //add 1 to the current index
+    currentIndex++;
+    //if the current index now exceeds the length of the current array, set it back to 0
+    if (currentIndex >= currentArray.length) {
+      currentIndex = 0;
+    }
+    // load the new sound
+    preloadAudio();
+    //play the new sound
+    sound.play();
+    //set play icons to pause
+    setPlayIcons('pause');
+    //update the title
+    updateTitle();
+  }
+
+  function getBoxId(element) {
+    return element.currItem.el[0].id
+  }
+
+  function getId(element) {
+    return element.target.parentElement.id
+  }
+
+  function whichArray(d) {
+    switch (d) {
+      case 'spine':
+      case 's0':
+        return spineArray;
+      case 'best':
+      case 's3':
+        return bestArray;
+      case 'dance':
+      case 's6':
+        return danceArray;
+      case 'diss':
+      case 's11':
+        return dissArray;
+      default:
+        console.log("No suitable array was found");
+        break;
+    }
+  }
+
+  function setArray(element) {
+    //get id
+    currentId = getBoxId(element);
+    //use id to set corresponding array
+    currentArray = whichArray(currentId);
+  }
+
+  function preloadAudio() {
+    var i = currentArray[currentIndex];
+    sound = new Audio(i);
+  }
+
+  //to run when magnific-popup opens a page with a sound design player
+  function openLightbox(thing) {
+    //variables
+    //thing is the box object passed by mfp when the popup opens
+    let thisBox = thing;
+    //add a listener to the escape button
+    let escButton = document.querySelector('.mfp-close');
+    escButton.addEventListener("click", escSound);
+
+    //initialize audio
+    //call addListeners
+    addListeners();
+    setArray(thisBox);
+    preloadAudio();
+
+    //end of if(#soundbox) statement
+  }
+  //end of openLightbox function
+
+  //to run when mfp closes a page
+  function escSound() {
+    //pause the current sound
+    sound.pause();
+
+    //remove the event listeners
+    //problem is that these functions have no access to the addeventlistener functions. ugh.
+    for (let j = 0; j < playArray.length; j++) {
+      playArray[j].removeEventListener("click", togglePlay);
+    }
+    for (let j = 0; j < nextArray.length; j++) {
+      nextArray[j].removeEventListener("click", nextSong);
+    }
+  }
+
+
+  //module-specific code
   if (document.querySelector('#portfolio-selector')) {
     //Portfolio Navigation
     const navArray = document.querySelectorAll('.portfolio-menu a');
@@ -334,6 +322,66 @@ function init() {
         }
       });
     });
+  }
+  if (document.querySelector('#aboutme')) {
+    // pop-up gallery for the about me box
+    //initialize magnific pop-up
+    $(document).ready(function () {
+      $('.open-about-popup').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        callbacks: {
+          open: function () {
+            openAbout(this);
+          },
+          close: function () {
+            escAbout();
+          }
+          // e.t.c.
+        }
+      });
+    });
+  }
+
+  function openAbout(){
+    console.log("About me");
+  }
+  function escAbout(){
+    console.log("Goodbye!");
+  }
+  if (document.querySelector('#contactme')) {
+    // pop-up gallery for the about me box
+    //initialize magnific pop-up
+    $(document).ready(function () {
+      $('.open-contact-popup').magnificPopup({
+        type: 'inline',
+        midClick: true,
+        focus: '#fname',
+        callbacks: {
+          beforeOpen: function() {
+            if($(window).width() < 700) {
+              this.st.focus = false;
+            } else {
+              this.st.focus = '#name';
+            }
+          },
+          open: function () {
+            openContact(this);
+          },
+          close: function () {
+            escContact();
+          }
+          // e.t.c.
+        }
+      });
+    });
+  }
+
+  function openContact(){
+    console.log("Contact me");
+  }
+  function escContact(){
+    console.log("Goodbye!");
   }
   if (document.querySelector('#content')) {
     //sidebar slide menu

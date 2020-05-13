@@ -1,0 +1,123 @@
+#nav
+  max-width: 1100px
+  margin: 0 auto
+
+.grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(367px, 1fr))
+  grid-gap: 0
+  margin: 0 auto
+  position: relative
+
+  @media screen and (max-width: 367px)
+    display: block
+
+  img
+    width: 100%
+
+
+.grid-item
+  position: relative
+  overflow: hidden
+
+  &:hover,
+  &:active,
+  &:focus
+
+    .title
+      opacity: 1
+      color: $offwt
+    
+    .nav-image img
+      filter: blur(2px)
+
+  @media screen and (max-width: 733px)
+    max-width: 512px
+    margin: 0 auto
+    @include shadow
+
+.nav-photo
+  line-height: 0
+  display: block
+
+.nav-image img
+  filter: blur(0px)
+  transition: filter 0.3s ease-in
+  transform: scale(1.1)
+
+.title
+  /*general*/
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 0
+  height: 100%
+  width: 100%
+  background: $shadow
+  /*typographic styles*/
+  color: $offwt
+  font-size: 1.5em
+  font-weight: bold
+  text-decoration: none
+  /*position text in center of div */
+  display: flex
+  align-items: center
+  justify-content: center
+  /* hide the title by default */
+  opacity: 0
+  transition: opacity .5s
+
+/* for touch screen devices */
+@media (hover: none)  
+  .title 
+    opacity: 1
+  
+  .nav-image img
+    filter: blur(2px)
+
+//Contact form styles
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea
+  width: 100%
+  padding: 12px
+  border: 1px solid $shadow
+  border-radius: 6px
+  box-sizing: border-box
+  margin-top: 6px
+  margin-bottom: 16px
+  resize: vertical
+
+/* Style the submit button with a specific background color etc */
+input[type=submit]
+  background-color: $tertiary
+  color: white
+  padding: 12px 20px
+  border: none
+  border-radius: 4px
+  cursor: pointer
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover 
+  background-color: $shadow
+
+/* Add a background color and some padding around the form */
+.contact-container 
+  border-radius: 5px
+  padding: 20px
+
+.lightbox-form
+  position: relative
+  max-width: 71.875rem
+  margin: 2.5rem auto
+  padding: 3rem 1rem
+  background-color: $white
+  text-align: left
+  border-radius: 14px
+
+.lightbox-head
+  h3
+    color: $dark
+    text-align: center
+
+.antispam 
+  display: none
