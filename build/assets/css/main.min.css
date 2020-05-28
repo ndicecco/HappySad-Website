@@ -1048,9 +1048,15 @@ input[type=submit]:hover {
   line-height: 0px; }
 
 .heroimg {
-  width: 100%;
-  height: auto;
-  display: block; }
+  width: auto;
+  height: 70vh;
+  display: block;
+  margin: 0 auto; }
+
+.bioimg {
+  height: 50vh;
+  display: block;
+  margin: 0 auto; }
 
 #happynav {
   margin: 0 auto;
@@ -1069,6 +1075,9 @@ input[type=submit]:hover {
 #about {
   background-color: #fff;
   display: none; }
+
+#aboutusphoto {
+  background-color: #111; }
 
 .happyhl {
   width: 100%;
